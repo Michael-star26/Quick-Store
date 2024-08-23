@@ -1,14 +1,30 @@
 import { TuiRoot } from "@taiga-ui/core";
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { NgxSpinnerService } from "ngx-spinner";
+import { HomeComponent } from "./home/home.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TuiRoot],
+  imports: [
+    RouterOutlet, 
+    TuiRoot,
+    NgxSpinnerModule,
+    HomeComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.less'
 })
-export class AppComponent {
-  title = 'QuickStore';
+export class AppComponent implements OnInit {
+  constructor(private spinner:NgxSpinnerService){}
+  title = 'Quick Store';
+  ngOnInit(): void {
+    this.spinner.show()
+    setTimeout(()=>{
+      this.spinner.hide()
+    },3000)
+  }
+  
 }
