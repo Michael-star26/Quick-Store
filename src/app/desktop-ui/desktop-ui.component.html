@@ -1,11 +1,210 @@
 <header tuiNavigationHeader>
-    <button></button>
-    <h1>Quick Store</h1>
+    <button
+    [style.color]=" 'yellow' "
+    iconStart="@tui.chevron-down"
+    size="s"
+    tuiIconButton
+    ></button>
+    <span tuiNavigationLogo>
+        <tui-icon appearance="warning" [style.color]=" 'yellow' " icon="@tui.shopping-bag"/>
+        <span tuiFade [style.color]=" 'aliceblue' ">Quick Store</span>
+    </span>
+    <button
+    [tuiDropdown]="more"
+    tuiButton
+    tuiChevron
+    tuiDropdownOpen
+    tuiDropdownmanual="true"
+    [style.color]=" 'yellow' "
+    >
+        <span tuiFade [style.color]=" 'aliceblue' ">Find</span>
+    </button>
+    <ng-template id="more" #more>
+        <tui-data-list size="s">
+            <button tuiOption>
+                Offers
+            </button>
+            <button tuiOption>
+                Featured     
+            </button>
+        </tui-data-list>
+    </ng-template>
+    <form action="" class="d-flex m-auto">
+        <tui-input
+        tuiTextfieldSize="s"
+        [tuiTextfieldCleaner]="true"
+        tuiTextfieldIconLeft="@tui.search"
+        [formControl]="search"
+        [style.width]="'30rem'"  
+        >
+            Search
+            <input 
+            tuiTextfieldLegacy
+            />
+        </tui-input>
+    </form>
+    <button
+    tuiButton
+    iconStart="@tui.shopping-cart"
+    [style.color]=" 'yellow' "
+    >
+    <sup>
+        <tui-badge size="s" [style.background-color]=" 'maroon' ">5</tui-badge>
+    </sup>
+        <span tuiFade [style.color]=" 'aliceblue' ">Cart</span>
+    </button>
+    <button
+    tuiButton
+    iconStart="@tui.user"
+    [style.color]=" 'yellow' "
+    >
+        <sup>
+            <tui-badge size="s" [style.background-color]=" 'maroon'" [style.zoom]="'40%'"></tui-badge>
+        </sup>
+        <span tuiFade [style.color]=" 'aliceblue' ">
+            Profile
+        </span>
+    </button>
+    <button
+    tuiButton
+    iconStart="@tui.bell"
+    [style.color]=" 'yellow' "
+    >
+    <sup>
+        <tui-badge size="s" [style.background-color]=" 'maroon' ">1</tui-badge>
+    </sup>
+    </button>
 </header>
-<aside [tuiNavigationAside]="expanded">
-</aside>
+
+<div [style.display]=" 'flex' " >
+    <aside [tuiNavigationAside]="expanded" [style.border-radius]=" '4px' ">
+        <header>
+            <button 
+            tuiAsideItem
+            iconStart="@tui.home"
+            [style.color]=" 'yellow' "
+            >
+                <span tuifade>Home</span>
+            </button>
+        </header>
+        <tui-aside-group [style.color]="'yellow'">
+            <button
+                iconStart="@tui.grid-3x3"
+                tuiAsideItem
+                tuiChevron
+            >
+                Categories
+                <ng-template>
+                    <button tuiAsideItem>Women clothes</button>
+                    <button tuiAsideItem>Men clothes</button>
+                    <button tuiAsideItem>Kids clothes</button>
+                </ng-template>
+            </button>
+        </tui-aside-group>
+          <button 
+            tuiAsideItem
+            iconStart="@tui.clipboard"
+            [style.color]=" 'yellow' "
+            >
+                <span tuifade>Orders</span>  
+          </button>
+          <button 
+            tuiAsideItem
+            iconStart="@tui.gift"
+            [style.color]=" 'yellow' "
+            >
+                <span tuifade>Offers</span>  
+          </button>
+          <button 
+            tuiAsideItem
+            iconStart="@tui.sliders-horizontal"
+            [style.color]="'yellow'"
+            >
+                <span tuifade>Filter</span>  
+          </button>
+          <button 
+            tuiAsideItem
+            iconStart="@tui.tag"
+            [style.color]="'yellow'"
+            >
+                <span tuifade>Brands</span>  
+          </button>
+          <button 
+            tuiAsideItem
+            iconStart="@tui.mail"
+            [style.color]="'yellow'"
+            >
+            <span tuifade>Messages</span>
+          </button>
+          <a 
+            tuiAsideItem
+            iconStart="@tui.pen-tool"
+            [style.color]="'yellow'"
+            >
+            <span tuifade>Help</span>
+          </a>
+          <button 
+            tuiAsideItem
+            iconStart="@tui.dollar-sign"
+            [style.color]="'yellow'"
+            >
+            <span tuifade>Change currency</span>
+          </button>
+          <button 
+            tuiAsideItem
+            iconStart="@tui.credit-card"
+            [style.color]="'yellow'"
+            >
+            <span tuifade>Add Payment method</span>
+          </button>
+          <button 
+            tuiAsideItem
+            iconStart="@tui.flag"
+            [style.color]="'yellow'"
+            >
+            <span tuifade>Flag</span>
+          </button>
+          <button 
+            tuiAsideItem
+            iconStart="@tui.bookmark"
+            [style.color]="'yellow'"
+            >
+            <span tuifade>Favourites</span>
+          </button>
+          <hr>
+          <tui-aside-group>
+            <button
+                iconStart="@tui.settings"
+                tuiAsideItem
+                tuiChevron
+            >
+                Settings
+                <ng-template>
+                    <button tuiAsideItem>Account</button>
+                    <button tuiAsideItem>Notifications</button>
+                    <button tuiAsideItem>Privacy</button>
+                </ng-template>
+            </button>
+        </tui-aside-group>
+        <footer>
+            <button
+                iconStart="@tui.user-plus"
+                tuiAsideItem
+            >
+                Following
+            </button>
+            <button
+                tuiAsideItem
+                [iconStart]="expanded ? '@tui.chevron-left' : '@tui.chevron-right'"
+                (click)="expanded = !expanded"
+            >
+                {{ expanded ? 'Collapse' : 'Expand' }}
+            </button>
+        </footer>
+    </aside>
+</div>
 <main tuiNavigationMain>
-    <nav tuinavigationNav>
+    <nav tuinavigationNav [style.position]=" 'sticky' ">
         Home, Login, Signup
     </nav>
 </main>
