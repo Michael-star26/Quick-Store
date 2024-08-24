@@ -3,7 +3,6 @@ import { Component ,OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { NgxSpinnerService } from "ngx-spinner";
-import { HomeComponent } from "./home/home.component";
 import { DesktopUiComponent } from "./desktop-ui/desktop-ui.component";
 import { FooterComponent } from "./footer/footer.component";
 
@@ -14,7 +13,6 @@ import { FooterComponent } from "./footer/footer.component";
     RouterOutlet, 
     TuiRoot,
     NgxSpinnerModule,
-    HomeComponent,
     DesktopUiComponent,
     FooterComponent,
   ],

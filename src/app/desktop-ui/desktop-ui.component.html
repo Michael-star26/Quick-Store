@@ -30,7 +30,7 @@
             </button>
         </tui-data-list>
     </ng-template>
-    <form action="" class="d-flex m-auto">
+    <form class="d-flex m-auto">
         <tui-input
         tuiTextfieldSize="s"
         [tuiTextfieldCleaner]="true"
@@ -204,6 +204,7 @@
             <span tuiFade>Settings</span>
             </a>
         </tui-aside-group>
+        
         <footer>
             <a href="" tuiAsideItem>
                 <tui-icon
@@ -222,11 +223,18 @@
             </button>
         </footer>
     </aside>
-</div>
-<main tuiNavigationMain>
-    <nav tuinavigationNav [style.position]=" 'sticky' ">
-        Home, Login, Signup
-        <router-outlet></router-outlet>
-    </nav>
-</main>
 
+    <main tuiNavigationMain>
+        <span size="s">
+            <header tuiHeader>
+                <nav tuiNavigationNav [style.position]=" 'sticky' ">
+                    <a routerLink=".">
+                        <tui-icon icon="@tui.chevron-left"/>
+                        Back
+                    </a>       
+                </nav>
+            </header>
+        </span>
+    </main>
+</div>
+<router-outlet></router-outlet>

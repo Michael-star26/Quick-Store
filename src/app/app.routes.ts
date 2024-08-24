@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { ViewProductComponent } from './view-product/view-product.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
     {path:'cart',title:'cart',component:CartComponent},
@@ -16,6 +17,6 @@ export const routes: Routes = [
     {path:'contact-us',title:'',component:ContactUsComponent},
     {path:'login',title:'',component:LoginComponent},
     {path:'item/id',title:'',component:ViewProductComponent},
-    {path:'',title:'Home', component:AppComponent},
+    {path:'',title:'Home', component:HomeComponent},
     {path:'**',title:'Page not found',component:NotFoundComponent},
 ];

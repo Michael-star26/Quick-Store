@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-// import { MobileUiComponent } from '../mobile-ui/mobile-ui.component';
-// import { DesktopUiComponent } from '../desktop-ui/desktop-ui.component';
-
 
 @Component({
   selector: 'app-home',
