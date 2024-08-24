@@ -1,3 +1,4 @@
+
 <header tuiNavigationHeader>
     <button
     [style.color]=" 'yellow' "
@@ -79,126 +80,145 @@
 <div [style.display]=" 'flex' " >
     <aside [tuiNavigationAside]="expanded" [style.border-radius]=" '4px' ">
         <header>
-            <button 
-            tuiAsideItem
-            iconStart="@tui.home"
-            [style.color]=" 'yellow' "
-            >
-                <span tuifade>Home</span>
-            </button>
+            <a routerLink="" tuiAsideItem>
+                <tui-icon 
+                icon="@tui.home"
+                [style.color]=" 'yellow' "
+                >
+                </tui-icon>
+                <span tuiFade>Home</span>
+            </a>
         </header>
-        <tui-aside-group [style.color]="'yellow'">
-            <button
-                iconStart="@tui.grid-3x3"
-                tuiAsideItem
-                tuiChevron
+        <tui-aside-group>
+            <a href="" 
+            tuiAsideItem 
+            tuiChevron
             >
-                Categories
+                <tui-icon
+                icon="@tui.grid-3x3"
+                [style.color]=" 'yellow' "
+            >               
                 <ng-template>
                     <button tuiAsideItem>Women clothes</button>
                     <button tuiAsideItem>Men clothes</button>
                     <button tuiAsideItem>Kids clothes</button>
                 </ng-template>
-            </button>
+            </tui-icon>
+            <span tuiFade>Categories</span>
+            </a>
         </tui-aside-group>
-          <button 
-            tuiAsideItem
-            iconStart="@tui.clipboard"
+          <a routerLink="orders" tuiAsideItem>
+            <tui-icon 
+            icon="@tui.clipboard"
             [style.color]=" 'yellow' "
-            >
-                <span tuifade>Orders</span>  
-          </button>
-          <button 
-            tuiAsideItem
-            iconStart="@tui.gift"
-            [style.color]=" 'yellow' "
-            >
-                <span tuifade>Offers</span>  
-          </button>
-          <button 
-            tuiAsideItem
-            iconStart="@tui.sliders-horizontal"
-            [style.color]="'yellow'"
-            >
-                <span tuifade>Filter</span>  
-          </button>
-          <button 
-            tuiAsideItem
-            iconStart="@tui.tag"
-            [style.color]="'yellow'"
-            >
-                <span tuifade>Brands</span>  
-          </button>
-          <button 
-            tuiAsideItem
-            iconStart="@tui.mail"
-            [style.color]="'yellow'"
-            >
-            <span tuifade>Messages</span>
-          </button>
-          <a 
-            tuiAsideItem
-            iconStart="@tui.pen-tool"
-            [style.color]="'yellow'"
-            >
-            <span tuifade>Help</span>
+            > 
+          </tui-icon>
+          <span tuiFade>Orders</span> 
           </a>
-          <button 
-            tuiAsideItem
-            iconStart="@tui.dollar-sign"
+          <a routerLink="offers" tuiAsideItem>
+            <tui-icon     
+            icon="@tui.gift"
+            [style.color]="'yellow'"
+            >  
+          </tui-icon>
+          <span tuiFade>Offers</span>
+          </a>
+          <a routerLink="filter" tuiAsideItem>
+            <tui-icon 
+            [style.color]="'yellow'"
+            icon="@tui.sliders-horizontal"
+            [style.background]=" 'linear-gradient(135deg,black 60%,yellow)' "
+            >  
+          </tui-icon>
+          <span tuiFade>Filter</span>
+          </a>
+          <a routerLink="brands" tuiAsideItem> 
+            <tui-icon  
+            icon="@tui.tag"
+            [style.color]="'yellow'"
+            >  
+          </tui-icon>
+          <span tuiFade>Brands</span>
+          </a>
+          <a routerLink="messages" tuiAsideItem>
+            <tui-icon 
+            icon="@tui.mail"
             [style.color]="'yellow'"
             >
-            <span tuifade>Change currency</span>
-          </button>
-          <button 
-            tuiAsideItem
-            iconStart="@tui.credit-card"
+          </tui-icon>
+          <span tuiFade>Messages</span>
+          </a>
+          <a 
+            tuiAsideItem routerLink="help"
+            >
+            <tui-icon 
+            icon="@tui.pen-tool"
+            [style.color]="'yellow'"></tui-icon>
+            <span tuiFade [style.color]=" 'ghostwhite' ">Help</span>
+          </a>
+          <a tuiAsideItem>
+            <tui-icon 
+            icon="@tui.dollar-sign"
+            [style.color]="'yellow'"
+            ></tui-icon>
+            <span tuiFade>Change currency</span>
+          </a>
+          <a tuiAsideItem>
+            <tui-icon            
+            icon="@tui.credit-card"
             [style.color]="'yellow'"
             >
-            <span tuifade>Add Payment method</span>
-          </button>
-          <button 
-            tuiAsideItem
-            iconStart="@tui.flag"
+          </tui-icon>
+          <span tuiFade>Add Payment method</span>
+          </a>
+          <a tuiAsideItem>
+            <tui-icon            
+            icon="@tui.flag"
+            [style.color]="'yellow'"
+            > 
+          </tui-icon>
+          <span tuiFade>Flag</span>
+          </a>
+          <a tuiAsideItem>
+            <tui-icon  
+            icon="@tui.bookmark"
             [style.color]="'yellow'"
             >
-            <span tuifade>Flag</span>
-          </button>
-          <button 
-            tuiAsideItem
-            iconStart="@tui.bookmark"
-            [style.color]="'yellow'"
-            >
-            <span tuifade>Favourites</span>
-          </button>
+          </tui-icon>
+          <span tuiFade>Favourites</span>
+          </a>
           <hr>
           <tui-aside-group>
-            <button
-                iconStart="@tui.settings"
-                tuiAsideItem
-                tuiChevron
+            <a tuiAsideItem
+            tuiChevron>
+                <tui-icon
+                icon="@tui.settings"   
+                [style.color]="'yellow'"            
             >
-                Settings
                 <ng-template>
                     <button tuiAsideItem>Account</button>
                     <button tuiAsideItem>Notifications</button>
                     <button tuiAsideItem>Privacy</button>
                 </ng-template>
-            </button>
+            </tui-icon>
+            <span tuiFade>Settings</span>
+            </a>
         </tui-aside-group>
         <footer>
-            <button
-                iconStart="@tui.user-plus"
-                tuiAsideItem
-            >
-                Following
-            </button>
+            <a href="" tuiAsideItem>
+                <tui-icon
+                icon="@tui.user-plus"
+                [style.color]="'yellow'"
+            ></tui-icon>
+            <span tuiFade>Following</span>
+            </a>
+            
             <button
                 tuiAsideItem
                 [iconStart]="expanded ? '@tui.chevron-left' : '@tui.chevron-right'"
                 (click)="expanded = !expanded"
             >
-                {{ expanded ? 'Collapse' : 'Expand' }}
+                {{ expanded ? 'Collapse' : ' ' }}
             </button>
         </footer>
     </aside>
@@ -206,5 +226,7 @@
 <main tuiNavigationMain>
     <nav tuinavigationNav [style.position]=" 'sticky' ">
         Home, Login, Signup
+        <router-outlet></router-outlet>
     </nav>
 </main>
+

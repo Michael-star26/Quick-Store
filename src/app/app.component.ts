@@ -4,6 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { NgxSpinnerService } from "ngx-spinner";
 import { HomeComponent } from "./home/home.component";
+import { DesktopUiComponent } from "./desktop-ui/desktop-ui.component";
+import { FooterComponent } from "./footer/footer.component";
 
 @Component({
   selector: 'app-root',
@@ -13,6 +15,8 @@ import { HomeComponent } from "./home/home.component";
     TuiRoot,
     NgxSpinnerModule,
     HomeComponent,
+    DesktopUiComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.less'

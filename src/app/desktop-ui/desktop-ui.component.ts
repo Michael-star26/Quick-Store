@@ -27,10 +27,13 @@ import {
 import {ReactiveFormsModule,FormControl, Validators } from '@angular/forms';
 import { TuiObscured } from '@taiga-ui/cdk/directives/obscured';
 import { TuiActiveZone } from '@taiga-ui/cdk/directives/active-zone';
+import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-desktop-ui',
   standalone: true,
   imports: [
+    RouterOutlet,
+    RouterLink,
     TuiHint,
     ReactiveFormsModule,
     TuiDataListDropdownManager,
@@ -58,6 +61,6 @@ import { TuiActiveZone } from '@taiga-ui/cdk/directives/active-zone';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DesktopUiComponent {
-  expanded=true
+  expanded=false
   search=new FormControl ('',[Validators.required])
 }
