@@ -1,5 +1,5 @@
 
-<header tuiNavigationHeader [style.position]=" 'fixed' ">
+<header tuiNavigationHeader [style.position]=" 'fixed' " class="header">
     
     <button
     [style.color]=" 'yellow' "
@@ -78,8 +78,8 @@
     </button>
 </header>
 
-<div [style.display]=" 'flex' ">
-    <aside [tuiNavigationAside]="expanded" [style.height]=" 'fit-content' ">
+<div [style.display]=" 'flex' " class="main">
+    <aside [tuiNavigationAside]="expanded" [style.height]=" 'fit-content' " class="main">
         <header>
             <a routerLink="" tuiAsideItem>
                 <tui-icon 
@@ -226,17 +226,107 @@
     </aside>
 
     <span [style.background]="'aliceblue'" >
-        <main tuiNavigationMain>
-            <span size="s">
-                <header tuiHeader>
-                    Quick Store
-                </header>
-                <div class="m-5"></div>
-                <div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident perspiciatis, vero tempore facere atque ipsa sed illo ea, eum maiores aliquam optio iusto expedita earum exercitationem? Cumque similique fugit voluptatum.</p>
+        <main tuiNavigationMain class="main">
+            <!-- style="background:url('./images/Guitar.jpg');background-repeat: no-repeat;background-size: cover;" -->
+            <span size="s" class="transit flex row">
+                <div class="mb-5 p-3"></div>
 
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident perspiciatis, vero tempore facere atque ipsa sed illo ea, eum maiores aliquam optio iusto expedita earum exercitationem? Cumque similique fugit voluptatum.</p>
-                </div>               
+                <section class="row mb-2">
+                    <div class="col-md-3 flex" >
+                        <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
+                    </div>
+                    <div class="col-md-3 flex" >
+                        <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
+                    </div>
+                    <div class="col-md-3 flex" >
+                        <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
+                    </div>
+                    <div class="col-md-3 flex" >
+                        <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
+                    </div>
+                </section>
+                               
+                <div class="container flex">
+                    <section class="side">
+                        <h1>
+                            Shop with us
+                        </h1>
+                    </section>
+        
+                    <div style="background:url('./images/clothe3.jpg')no-repeat 50%/cover;height: 100%;margin-bottom: 2px;">
+                        <a class="ui small right ribbon label" [style.background-color]="'yellow'">
+                            Quick Sales
+                        </a>
+                        <div>
+                            <a class="ui large yellow left corner label" [style.background-color]="'yellow'">
+                                <i class="ui black tags icon"></i>
+                            </a>
+                        </div>
+                      <div class="content">
+                        <h2>Jane Doe</h2>
+                        <span>UI & UX Designer</span>
+                      </div>
+                    </div>
+                    <div style="background:url('./images/clothe2.jpg')no-repeat 50%/cover">
+                        <div>
+                            <a class="ui large yellow left corner label">
+                                <i class="ui black award icon"></i>
+                            </a>
+                        </div>
+                      <div class="content">
+                        <h2>Alex Smith</h2>
+                        <span>CEO Expert</span>
+                      </div>
+                    </div>
+                    <div style="background:url('./images/clothe3.jpg')no-repeat 50%/cover">
+                        <div>
+                            <a class="ui large yellow left corner label">
+                                <i class="ui black shipping fast icon"></i>
+                            </a>
+                        </div>
+                      <div class="content">
+                        <h2>Emily New</h2>
+                        <span>Web Designer</span>
+                      </div>
+                    </div>
+                    <div style="background:url('./images/clothe4.jpg')no-repeat 50%/cover">
+                        <div>
+                            <a class="ui large yellow left corner label">
+                                <i class="ui black bolt icon"></i>
+                            </a>
+                        </div>
+                      <div class="content">
+                        <h2>Lisa Boley</h2>
+                        <span>Marketing Coordinator</span>
+                      </div>
+                    </div>
+                    <section class="side m-auto" style="color:aliceblue;position: relative;flex:2">
+                        <section class="row m-auto">
+                            <div class="col-sm-4">
+                                <span style="color:whitesmoke">Marketing Coordinator</span>
+                                <img src="./images/clothe10.jpg" alt="" height="100px">
+                            </div>
+                            <div class="col-sm-4" tyle="color:whitesmoke">
+                                <span>Marketing Coordinator</span>
+                                <img src="./images/clothe10.jpg" alt="" height="100px">
+                            </div>
+                            <div class="col-sm-4" tyle="color:whitesmoke">
+                                <span>Marketing Coordinator</span>
+                                <img src="./images/clothe10.jpg" alt="" height="100px">
+                            </div>
+                        </section>
+                        <section class="row m-auto" style="align-items: center;align-content: center;justify-self: center;justify-content: center;">
+                            <div class="col-sm-6 m-auto"  style="color:aliceblue;position: relative;flex:1 0 120px">
+                                <span style="color:whitesmoke">Marketing Coordinator</span>
+                                <img src="./images/clothe10.jpg" alt="" height="200px">
+                            </div>
+                            <div class="col-sm-6 m-auto" tyle="color:whitesmoke">
+                                <span>Marketing Coordinator</span>
+                                <img src="./images/clothe10.jpg" alt="" height="200px">
+                            </div>
+                        </section>
+                    </section>
+                  </div>                        
             </span>
             
             <nav 
@@ -257,40 +347,89 @@
                     Back
                 </a>    
             </nav>
-            <div
-            *tuiRepeatTimes="let index of 50"
-            tuiCardLarge
-            tuiHeader
-            tuiSurface="elevated"
-        >
-            <h2 tuiTitle>
-                Some random content
-                <span tuiSubtitle>A subtitle</span>
-            </h2>
-        </div>
+            <!-- carouse -->
+            <section class="row mb-2" style="position:static">
+                <div class="col-md-3 flex" >
+                    <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
+                </div>
+                <div class="col-md-3 flex" >
+                    <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
+                </div>
+                <div class="col-md-3 flex" >
+                    <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
+                </div>
+                <div class="col-md-3 flex" >
+                    <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
+                </div>
+            </section>
+            <!--  -->
+            <h4 style="justify-content: center;color: aliceblue;">Categories</h4>
+            <section>
+                <div class="ui horizontal divider" style="color: aliceblue;">Home appliances</div>
+                <section class="row" style="justify-content: baseline;align-items: center;">
+                    <div
+                    class="col-sm-3 d-flex m-2"
+                    *tuiRepeatTimes="let index of 6"
+                    tuiCardLarge
+                    tuiHeader
+                    tuiSurface="elevated"
+                >
+                    <h2 tuiTitle>
+                        Some random content
+                        <span tuiSubtitle>A subtitle</span>
+                    </h2>
+                </div>
+                </section>
+                <section class="row" style="justify-content: baseline;align-items: center;">
+                    <div
+                    class="col-sm-4 d-flex m-2"
+                    *tuiRepeatTimes="let index of 6"
+                    tuiCardLarge
+                    tuiHeader
+                    tuiSurface="elevated"
+                >
+                    <h2 tuiTitle>
+                        Some random content
+                        <span tuiSubtitle>A subtitle</span>
+                    </h2>
+                </div>
+                </section>
+            </section>
+
+            <div class="ui horizontal divider" style="color: aliceblue;">Home appliances</div>
+            
+            <section class="row" style="justify-content: baseline;align-items: start;">
+                <div
+                class="col-md-2 d-flex m-2"
+                *tuiRepeatTimes="let index of 7"
+                tuiCardLarge
+                tuiHeader
+                tuiSurface="elevated"
+            >
+                <h2 tuiTitle>
+                    Some random content
+                    <span tuiSubtitle>A subtitle</span>
+                </h2>
+            </div>
+            </section>
+            <section class="row" style="justify-content: baseline;align-items: start;">
+                <div
+                class="col-md-3 d-flex m-2"
+                *tuiRepeatTimes="let index of 8"
+                tuiCardLarge
+                tuiHeader
+                tuiSurface="elevated"
+            >
+                <h2 tuiTitle>
+                    Some random content
+                    <span tuiSubtitle>A subtitle</span>
+                </h2>
+            </div>
+            </section>
+
         </main>
     </span>
 </div>
 
-<div>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi possimus veritatis necessitatibus, aliquam vero delectus alias facere optio quo qui molestias recusandae accusantium tempore earum ipsum ullam distinctio cumque unde.</p>
 
-    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maiores similique labore ea saepe odit deleniti, pariatur quos doloremque reiciendis est impedit dolorum delectus cumque voluptatibus vitae quae veritatis quas!</h5>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam et totam tenetur! Dolore officiis commodi iure quasi minima earum qui ipsa placeat, cupiditate eos ab. Harum provident vel reiciendis!</p>
-
-    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquid cupiditate eius veritatis facilis nulla voluptatem quae, consequuntur corrupti magnam earum, reiciendis odit molestiae ut vero recusandae doloribus quos officia.</h3>
-
-    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda deleniti expedita in nulla reiciendis numquam nihil ab ex, amet nesciunt rerum autem velit iure dolores placeat eius. Dignissimos, nulla asperiores?</h2>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi possimus veritatis necessitatibus, aliquam vero delectus alias facere optio quo qui molestias recusandae accusantium tempore earum ipsum ullam distinctio cumque unde.</p>
-
-    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maiores similique labore ea saepe odit deleniti, pariatur quos doloremque reiciendis est impedit dolorum delectus cumque voluptatibus vitae quae veritatis quas!</h5>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam et totam tenetur! Dolore officiis commodi iure quasi minima earum qui ipsa placeat, cupiditate eos ab. Harum provident vel reiciendis!</p>
-
-    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor aliquid cupiditate eius veritatis facilis nulla voluptatem quae, consequuntur corrupti magnam earum, reiciendis odit molestiae ut vero recusandae doloribus quos officia.</h3>
-
-    <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda deleniti expedita in nulla reiciendis numquam nihil ab ex, amet nesciunt rerum autem velit iure dolores placeat eius. Dignissimos, nulla asperiores?</h2>
-</div>
 <router-outlet></router-outlet>
