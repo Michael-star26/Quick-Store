@@ -1,9 +1,8 @@
 
-<header tuiNavigationHeader [style.position]=" 'fixed' " class="header">
-    
+<header tuiNavigationHeader [style.position]=" 'fixed' " class="header">   
     <button
     [style.color]=" 'yellow' "
-    iconStart="@tui.chevron-down"
+    iconStart="@tui.slack"
     size="s"
     tuiIconButton
     ></button>
@@ -227,106 +226,12 @@
 
     <span [style.background]="'aliceblue'" >
         <main tuiNavigationMain class="main">
-            <!-- style="background:url('./images/Guitar.jpg');background-repeat: no-repeat;background-size: cover;" -->
             <span size="s" class="transit flex row">
                 <div class="mb-5 p-3"></div>
 
-                <section class="row mb-2">
-                    <div class="col-md-3 flex" >
-                        <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
-                    </div>
-                    <div class="col-md-3 flex" >
-                        <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
-                    </div>
-                    <div class="col-md-3 flex" >
-                        <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
-                    </div>
-                    <div class="col-md-3 flex" >
-                        <img src="/images/Guitar.jpg" height="200px" width="100%" alt="">
-                    </div>
-                </section>
+                <app-top-view></app-top-view>
                                
-                <div class="container flex">
-                    <section class="side">
-                        <h1>
-                            Shop with us
-                        </h1>
-                    </section>
-        
-                    <div style="background:url('./images/clothe3.jpg')no-repeat 50%/cover;height: 100%;margin-bottom: 2px;">
-                        <a class="ui small right ribbon label" [style.background-color]="'yellow'">
-                            Quick Sales
-                        </a>
-                        <div>
-                            <a class="ui large yellow left corner label" [style.background-color]="'yellow'">
-                                <i class="ui black tags icon"></i>
-                            </a>
-                        </div>
-                      <div class="content">
-                        <h2>Jane Doe</h2>
-                        <span>UI & UX Designer</span>
-                      </div>
-                    </div>
-                    <div style="background:url('./images/clothe2.jpg')no-repeat 50%/cover">
-                        <div>
-                            <a class="ui large yellow left corner label">
-                                <i class="ui black award icon"></i>
-                            </a>
-                        </div>
-                      <div class="content">
-                        <h2>Alex Smith</h2>
-                        <span>CEO Expert</span>
-                      </div>
-                    </div>
-                    <div style="background:url('./images/clothe3.jpg')no-repeat 50%/cover">
-                        <div>
-                            <a class="ui large yellow left corner label">
-                                <i class="ui black shipping fast icon"></i>
-                            </a>
-                        </div>
-                      <div class="content">
-                        <h2>Emily New</h2>
-                        <span>Web Designer</span>
-                      </div>
-                    </div>
-                    <div style="background:url('./images/clothe4.jpg')no-repeat 50%/cover">
-                        <div>
-                            <a class="ui large yellow left corner label">
-                                <i class="ui black bolt icon"></i>
-                            </a>
-                        </div>
-                      <div class="content">
-                        <h2>Lisa Boley</h2>
-                        <span>Marketing Coordinator</span>
-                      </div>
-                    </div>
-                    <section class="side m-auto" style="color:aliceblue;position: relative;flex:2">
-                        <section class="row m-auto">
-                            <div class="col-sm-4">
-                                <span style="color:whitesmoke">Marketing Coordinator</span>
-                                <img src="./images/clothe10.jpg" alt="" height="100px">
-                            </div>
-                            <div class="col-sm-4" tyle="color:whitesmoke">
-                                <span>Marketing Coordinator</span>
-                                <img src="./images/clothe10.jpg" alt="" height="100px">
-                            </div>
-                            <div class="col-sm-4" tyle="color:whitesmoke">
-                                <span>Marketing Coordinator</span>
-                                <img src="./images/clothe10.jpg" alt="" height="100px">
-                            </div>
-                        </section>
-                        <section class="row m-auto" style="align-items: center;align-content: center;justify-self: center;justify-content: center;">
-                            <div class="col-sm-6 m-auto"  style="color:aliceblue;position: relative;flex:1 0 120px">
-                                <span style="color:whitesmoke">Marketing Coordinator</span>
-                                <img src="./images/clothe10.jpg" alt="" height="200px">
-                            </div>
-                            <div class="col-sm-6 m-auto" tyle="color:whitesmoke">
-                                <span>Marketing Coordinator</span>
-                                <img src="./images/clothe10.jpg" alt="" height="200px">
-                            </div>
-                        </section>
-                    </section>
-                  </div>                        
+                <app-collection></app-collection>                        
             </span>
             
             <nav 
@@ -335,16 +240,16 @@
             style="margin-top: 0px;"
             >
                 <a routerLink=".">
-                    <tui-icon icon="@tui.chevron-left"/>
-                    Back
+                    <tui-icon icon="@tui.chevron-right"/>
+                    root
                 </a>   
                 <a routerLink=".">
-                    <tui-icon icon="@tui.chevron-left"/>
-                    Back
+                    <tui-icon icon="@tui.chevron-right"/>
+                    directory
                 </a>
                 <a routerLink=".">
-                    <tui-icon icon="@tui.chevron-left"/>
-                    Back
+                    <tui-icon icon="@tui.chevron-right"/>
+                    sub-directory
                 </a>    
             </nav>
             <!-- carouse -->

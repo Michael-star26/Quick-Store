@@ -10,6 +10,7 @@ import {
   TuiAppearance,
   TuiSurface
  } from '@taiga-ui/core';
+  
  
 import {
   TuiCardLarge,
@@ -35,10 +36,17 @@ import { TuiActiveZone } from '@taiga-ui/cdk/directives/active-zone';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+import { LoginComponent } from '../login/login.component';
+import { CollectionComponent } from '../collection/collection.component';
+import { TopViewComponent } from '../top-view/top-view.component';
+
 @Component({
   selector: 'app-desktop-ui',
   standalone: true,
   imports: [
+    TopViewComponent,
+    CollectionComponent,
+    LoginComponent,
     CommonModule,
     TuiNavComponent,
     TuiHeader,
