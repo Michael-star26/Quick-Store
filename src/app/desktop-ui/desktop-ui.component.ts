@@ -8,12 +8,15 @@ import {
   TuiHint,
   TuiDropdown,
   TuiAppearance,
-  TuiSurface
+  TuiSurface,
+  TuiScrollable,
+  TuiScrollbar
  } from '@taiga-ui/core';
   
  
 import {
   TuiCardLarge,
+  TuiCardMedium,
   TuiHeader,
   TuiNavComponent,
   TuiNavigation,
@@ -28,7 +31,8 @@ import {
   TuiBadge,
   TuiChevron,
   TuiDataListDropdownManager,
-  TuiBadgeNotification
+  TuiBadgeNotification,
+  TuiButtonGroup
 } from '@taiga-ui/kit';
 import {ReactiveFormsModule,FormControl, Validators } from '@angular/forms';
 import { TuiObscured } from '@taiga-ui/cdk/directives/obscured';
@@ -44,6 +48,11 @@ import { TopViewComponent } from '../top-view/top-view.component';
   selector: 'app-desktop-ui',
   standalone: true,
   imports: [
+    TuiScrollable,
+    TuiScrollbar,
+    TuiButtonGroup,
+    TuiSurface,
+    TuiCardMedium,
     TopViewComponent,
     CollectionComponent,
     LoginComponent,
