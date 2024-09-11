@@ -1,1 +1,253 @@
-<p>product-list works!</p>
+<h4 style="justify-content: center;color: aliceblue;">Categories</h4>
+<!-- section one -->
+            <section>
+                <div class="ui horizontal divider" style="color: aliceblue;">Home appliances</div>
+
+                <section class="row" style="justify-content: baseline;align-items: center;flex:0 0 250px;">
+                    <div
+                    tuiCardMedium
+                    tuiSurface
+                    class="col-sm-4 col-4 poster d-flex m-2 "
+                    size="m"
+                    *tuiRepeatTimes="let index of 12" 
+                    style="background:url(/images/laptop4.webp)  no-repeat bottom right;       
+                    background-size: cover;
+                    height:13rem;
+                    background-color: transparent;
+                    zoom: 80%;
+                    "     
+                    >
+                        <tui-badge
+                                appearance="custom"
+                                class="badge"
+                                [style.color]="'yellow'"
+                            >
+                                &nbsp;In stock
+                        </tui-badge>
+                        <div style="filter: drop-shadow(2px 2px 2px black);">
+                            <h2 tuiTitle size="s" >
+                                <span size="s" style="font-size: small;">
+                                    Cinema, concerts, theaters and sports up to 25%. This offer is valid until friday midnight
+                                    <label class="ui mini basic yellow label" style="background-color: transparent;">
+                                        <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
+                                    </label>
+                                </span>
+
+                            </h2>
+                        </div>
+                        <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
+                            <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%" size="s">
+                                <button size="s" >
+                                    <tui-icon icon="@tui.flag" ></tui-icon>
+                                    <span class="content">Rate</span>
+                                </button>
+
+                                <button size="s" >
+                                    <tui-icon icon="@tui.heart"></tui-icon>
+                                    <span class="content">Likes</span>
+                                </button>
+
+                                <button size="s" >
+                                    <tui-icon icon="@tui.shopping-cart"></tui-icon>
+                                    <span class="content">Cart</span>
+                                </button>
+                                
+                            </div>
+                            <label for="" class="ui yellow pointing above label">A supper computer</label>
+                            </div>
+                    </div>
+                </section>
+
+<!-- sub section 2 -->
+                <section class="row" style="justify-content: baseline;align-items: center;">
+                    <div class="ui horizontal divider" style="color: aliceblue;">Kitchen ware</div> 
+                    <div
+                    tuiCardMedium
+                    tuiSurface
+                    class="col-md-2 d-flex m-2"
+                    *tuiRepeatTimes="let index of 7"
+                    tuiSurface="elevated"
+                    class="poster d-flex m-2"
+                    style="background:url(/images/laptop5.webp)  no-repeat bottom right; 
+                    background-color: transparent;      
+                    background-size: cover;
+                    height:13rem;
+                "
+                    >
+                        <tui-badge
+                                appearance="custom"
+                                class="badge"
+                                [style.color]="'yellow'"
+                            >
+                                &nbsp;In stock
+                        </tui-badge>
+                        <div class="desc">
+                            <h2 tuiTitle size="s">
+                                <span size="s" style="font-size: small;">
+                                    Cinema, concerts, theaters and sports up to 25%
+                                    <label class="ui mini basic yellow label" style="background-color: transparent;">
+                                        <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
+                                    </label>
+                                </span>
+                            </h2>
+                        </div>
+                        <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
+                            <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%" size="s">
+                                <button size="s" >
+                                    <tui-icon icon="@tui.flag" ></tui-icon>
+                                    <!-- <span class="content">Rate</span> -->
+                                </button>
+
+                                <button size="s" >
+                                    <tui-icon icon="@tui.heart"></tui-icon>
+                                    <!-- <span class="content">Likes</span> -->
+                                </button>
+
+                                <button size="s" >
+                                    <tui-icon icon="@tui.shopping-cart"></tui-icon>
+                                    <!-- <span class="content">Cart</span> -->
+                                </button>
+                                
+                            </div>
+                            <label for="" class="ui yellow pointing above label">A supper computer</label>
+                            </div>
+                    </div>
+                    
+            
+
+                </section>
+            </section>
+
+<!--section 2  -->
+            <div class="ui horizontal divider" style="color: aliceblue;">Televisions</div>  
+            <section class="row" style="justify-content: baseline;align-items: start;">
+
+            <div
+            tuiCardMedium
+            tuiSurface
+            class="col-md-2 col-2 d-flex m-2"
+            *tuiRepeatTimes="let index of 7"
+            tuiSurface="elevated"
+            class="poster d-flex m-2"
+            style="background:url(/images/samsung5.png)  no-repeat bottom right;       
+                    background-size: cover;
+                    height:14rem;
+                    background-color: transparent;
+                    
+                    "
+            >
+                <tui-badge
+                        appearance="custom"
+                        class="badge"
+                        [style.color]="'yellow'"
+                    >
+                        &nbsp;In stock
+                </tui-badge>
+                <div class="desc">
+                    <h2 tuiTitle size="s">
+                        <span size="s" style="font-size: small;">
+                            Cinema, concerts, theaters and sports up to 25%
+                            <label class="ui mini basic yellow label" style="background-color: transparent;">
+                                <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
+                            </label>
+                        </span>
+                    </h2>
+                </div>
+                <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
+                    <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%" size="s">
+                        <button size="s" >
+                            <tui-icon icon="@tui.flag" ></tui-icon>
+                            <span class="content">Rate</span>
+                        </button>
+
+                        <button size="s" >
+                            <tui-icon icon="@tui.heart"></tui-icon>
+                            <span class="content">Likes</span>
+                        </button>
+
+                        <button size="s" >
+                            <tui-icon icon="@tui.shopping-cart"></tui-icon>
+                            <span class="content">Cart</span>
+                        </button>
+                        
+                    </div>
+                    <label for="" class="ui yellow pointing above label">A supper computer</label>
+                </div>
+            </div>
+            </section>
+<!--section 3  -->
+<div class="ui horizontal divider" style="color: aliceblue;">Clothes</div>
+            <tui-carousel
+            [draggable]="true"
+            [itemsCount]="8"
+            [(index)]="index"
+            [duration]="2000"
+            >
+            <ng-container 
+            *ngFor="let item of items;let i=index">
+            <img src=""
+            draggable="false"
+            height="100px" 
+            width="100px"
+            src="{{item}}"
+            
+            class="item"
+            [class.item_active]="i===index+1"
+            *tuiItem>
+            </ng-container>
+
+            </tui-carousel>
+
+            <section class="row" style="justify-content: baseline;align-items: start;" >
+                <div
+                class="poster col-md-2 col-2 d-flex m-2"
+                *ngFor="let item of items"
+                tuiCardMedium
+                tuiSurface="elevated"
+                [ngStyle]="{ 
+                    'background-image': 'url(' + item + ')',
+                    'background-size': 'cover',
+                    'height':'14rem',
+                    'background-color': 'transparent'
+                }"
+                
+                    >
+                    <tui-badge
+                                appearance="custom"
+                                class="badge"
+                                [style.color]="'yellow'"
+                            >
+                                &nbsp;In stock
+                    </tui-badge>
+                    <div class="desc">
+                        <h2 tuiTitle size="s">
+                            <span size="s" style="font-size: small;">
+                                Cinema, concerts, theaters and sports up to 25%
+                                <label class="ui mini basic yellow label" style="background-color: transparent;">
+                                    <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
+                                </label>
+                            </span>
+                        </h2>
+                    </div>
+                    <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
+                        <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%;" size="s">
+                            <button size="s" >
+                                <tui-icon icon="@tui.flag" ></tui-icon>
+                                <span class="content">Rate</span>
+                            </button>
+
+                            <button size="s" >
+                                <tui-icon icon="@tui.heart"></tui-icon>
+                                <span class="content">Likes</span>
+                            </button>
+
+                            <button size="s" >
+                                <tui-icon icon="@tui.shopping-cart"></tui-icon>
+                                <span class="content">Cart</span>
+                            </button>
+                            
+                        </div>
+                        <label for="" class="ui yellow pointing above label">A supper computer</label>
+                    </div>
+                </div>
+            </section>

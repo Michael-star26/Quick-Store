@@ -1,35 +1,37 @@
 
-<header tuiNavigationHeader [style.position]=" 'fixed' " class="header">   
+<header tuiNavigationHeader  class="header">   
     <button
-    [style.color]=" 'yellow' "
     iconStart="@tui.slack"
     size="s"
     tuiIconButton
     ></button>
     <span tuiNavigationLogo>
-        <tui-icon appearance="warning" [style.color]=" 'yellow' " icon="@tui.shopping-bag"/>
-        <span tuiFade [style.color]=" 'aliceblue' ">Quick Store</span>
+        <tui-icon appearance="warning" icon="@tui.shopping-bag"/>
+        <span tuiFade>Quick Store</span>
     </span>
     <button
-    [tuiDropdown]="more"
+    appearance="secondary"
     tuiButton
     tuiChevron
     tuiDropdownOpen
-    tuiDropdownmanual="true"
-    [style.color]=" 'yellow' "
+    type="button"
+    [tuiDropdown]="more"
     >
-        <span tuiFade [style.color]=" 'aliceblue' ">Find</span>
+        <span tuiFade>Find</span>
+        <ng-template #more>
+            <tui-data-list size="s" role="menu">
+                <tui-opt-group *ngFor="let opt of options">
+                    <a tuiOption>{{opt}}</a>
+                </tui-opt-group>
+                <!-- <button tuiOption type="button">
+                    Offers
+                </button>
+                <button tuiOption type="button">
+                    Featured     
+                </button> -->
+            </tui-data-list>
+        </ng-template>
     </button>
-    <ng-template id="more" #more>
-        <tui-data-list size="s">
-            <button tuiOption>
-                Offers
-            </button>
-            <button tuiOption>
-                Featured     
-            </button>
-        </tui-data-list>
-    </ng-template>
     <form class="d-flex m-auto">
         <tui-input
         tuiTextfieldSize="s"
@@ -238,6 +240,7 @@
             tuiNavigationNav 
             [style.position]="'sticky'"
             style="margin-top: 0px;"
+            
             >
                 <a routerLink=".">
                     <tui-icon icon="@tui.chevron-right"/>
@@ -253,181 +256,10 @@
                 </a>    
             </nav>
 
-            <h4 style="justify-content: center;color: aliceblue;">Categories</h4>
-            <section>
-                <div class="ui horizontal divider" style="color: aliceblue;">Home appliances</div>
-                <section class="row" style="justify-content: baseline;align-items: center;flex:0 0 250px">
-                    <div
-                tuiCardMedium
-                tuiSurface
-                class="col-sm-4 d-flex m-0 "
-                *tuiRepeatTimes="let index of 14"
-                class="poster d-flex"
-                
-                >
-                    <tui-badge
-                            appearance="custom"
-                            class="badge"
-                            [style.color]="'yellow'"
-                        >
-                            &nbsp;In stock
-                    </tui-badge>
-                    <div class="desc">
-                        <h2 tuiTitle size="s" >
-                            <span size="s" style="font-size: small;">
-                                Cinema, concerts, theaters and sports up to 25%
-                                <label class="ui mini basic yellow label" style="background-color: transparent;">
-                                    <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
-                                </label>
-                            </span>
-
-                        </h2>
-                    </div>
-                    <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
-                        <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%" size="s">
-                            <button size="s" >
-                                <tui-icon icon="@tui.flag" ></tui-icon>
-                                <!-- <span class="content">Rate</span> -->
-                            </button>
-
-                            <button size="s" >
-                                <tui-icon icon="@tui.heart"></tui-icon>
-                                <!-- <span class="content">Likes</span> -->
-                            </button>
-
-                            <button size="s" >
-                                <tui-icon icon="@tui.shopping-cart"></tui-icon>
-                                <!-- <span class="content">Cart</span> -->
-                            </button>
-                            
-                        </div>
-                        <label for="" class="ui yellow pointing above label">A supper computer</label>
-                        </div>
-                </div>
-                </section>
-
-                <section class="row" style="justify-content: baseline;align-items: center;">
-                    <div
-                    tuiCardMedium
-                    tuiSurface
-                    class="col-md-2 d-flex m-2"
-                    *tuiRepeatTimes="let index of 7"
-                    tuiSurface="elevated"
-                    class="poster d-flex"
-                    >
-                        <tui-badge
-                                appearance="custom"
-                                class="badge"
-                                [style.color]="'yellow'"
-                            >
-                                &nbsp;In stock
-                        </tui-badge>
-                        <div class="desc">
-                            <h2 tuiTitle size="s">
-                                <span size="s" style="font-size: small;">
-                                    Cinema, concerts, theaters and sports up to 25%
-                                    <label class="ui mini basic yellow label" style="background-color: transparent;">
-                                        <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
-                                    </label>
-                                </span>
-                            </h2>
-                        </div>
-                        <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
-                            <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%" size="s">
-                                <button size="s" >
-                                    <tui-icon icon="@tui.flag" ></tui-icon>
-                                    <!-- <span class="content">Rate</span> -->
-                                </button>
-
-                                <button size="s" >
-                                    <tui-icon icon="@tui.heart"></tui-icon>
-                                    <!-- <span class="content">Likes</span> -->
-                                </button>
-
-                                <button size="s" >
-                                    <tui-icon icon="@tui.shopping-cart"></tui-icon>
-                                    <!-- <span class="content">Cart</span> -->
-                                </button>
-                                
-                            </div>
-                            <label for="" class="ui yellow pointing above label">A supper computer</label>
-                            </div>
-                    </div>
-                    
-            
-
-                </section>
-            </section>
-
-            <div class="ui horizontal divider" style="color: aliceblue;">Home appliances</div>
-            
-            <section class="row" style="justify-content: baseline;align-items: start;">
-
-            <div
-            tuiCardMedium
-            tuiSurface
-            class="col-md-2 d-flex m-2"
-            *tuiRepeatTimes="let index of 7"
-            tuiSurface="elevated"
-            class="poster d-flex"
-            >
-                <tui-badge
-                        appearance="custom"
-                        class="badge"
-                        [style.color]="'yellow'"
-                    >
-                        &nbsp;In stock
-                </tui-badge>
-                <div class="desc">
-                    <h2 tuiTitle size="s">
-                        <span size="s" style="font-size: small;">
-                            Cinema, concerts, theaters and sports up to 25%
-                            <label class="ui mini basic yellow label" style="background-color: transparent;">
-                                <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
-                            </label>
-                        </span>
-                    </h2>
-                </div>
-                <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
-                    <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%" size="s">
-                        <button size="s" >
-                            <tui-icon icon="@tui.flag" ></tui-icon>
-                            <!-- <span class="content">Rate</span> -->
-                        </button>
-
-                        <button size="s" >
-                            <tui-icon icon="@tui.heart"></tui-icon>
-                            <!-- <span class="content">Likes</span> -->
-                        </button>
-
-                        <button size="s" >
-                            <tui-icon icon="@tui.shopping-cart"></tui-icon>
-                            <!-- <span class="content">Cart</span> -->
-                        </button>
-                        
-                    </div>
-                    <label for="" class="ui yellow pointing above label">A supper computer</label>
-                    </div>
-            </div>
-            </section>
-            <section class="row" style="justify-content: baseline;align-items: start;">
-                <div
-                class="col-md-3 d-flex m-2"
-                *tuiRepeatTimes="let index of 8"
-                tuiCardLarge
-                tuiHeader
-                tuiSurface="elevated"
-            >
-                <h2 tuiTitle>
-                    Some random content
-                    <span tuiSubtitle>A subtitle</span>
-                </h2>
-            </div>
-            </section>
+            <app-products></app-products>
 
         </main>
     </span>
 </div>
-
 
 <router-outlet></router-outlet>

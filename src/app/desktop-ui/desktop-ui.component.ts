@@ -10,7 +10,8 @@ import {
   TuiAppearance,
   TuiSurface,
   TuiScrollable,
-  TuiScrollbar
+  TuiScrollbar,
+  TuiDropdownService
  } from '@taiga-ui/core';
   
  
@@ -43,17 +44,19 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from '../login/login.component';
 import { CollectionComponent } from '../collection/collection.component';
 import { TopViewComponent } from '../top-view/top-view.component';
+import { ProductsComponent } from '../products/products.component';
 
 @Component({
   selector: 'app-desktop-ui',
   standalone: true,
   imports: [
+    ProductsComponent,
     TuiScrollable,
     TuiScrollbar,
     TuiButtonGroup,
     TuiSurface,
     TuiCardMedium,
-    TopViewComponent,
+  TopViewComponent, 
     CollectionComponent,
     LoginComponent,
     CommonModule,
@@ -82,7 +85,6 @@ import { TopViewComponent } from '../top-view/top-view.component';
     TuiInputModule,
     TuiTextfieldControllerModule,
     TuiTextfield,
-    TuiDataList,
     TuiDropdown,
     TuiObscured,
     TuiActiveZone,
@@ -91,6 +93,7 @@ import { TopViewComponent } from '../top-view/top-view.component';
   templateUrl: './desktop-ui.component.html',
   styleUrl: './desktop-ui.component.less',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers:[TuiDropdownService]
 })
 export class DesktopUiComponent {
   expanded=false
@@ -100,5 +103,6 @@ export class DesktopUiComponent {
   pst(){
     this.position='relative'
     this.show=false
-  }
+  };
+  options=["discounts","Flash sale","Free delivery"];
 }

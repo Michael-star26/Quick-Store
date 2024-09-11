@@ -1,0 +1,133 @@
+.poster{
+    background: transparent;
+    color: transparent;
+    width: 14.9375rem;
+    height: 14rem;
+    padding: 1px;
+    box-shadow:none;
+    [tuiTitle]{
+        font-size: 0.5rem;
+        color:yellow;
+        display: flex;
+        align-items: center;
+        padding: 3px;
+        opacity: 0;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        box-shadow: none;
+        background: linear-gradient(
+            0deg,
+            rgba(46, 42, 2, 0.676) 0%,
+            rgba(255,255,255,0)100%
+            );
+        transform: translatey(100%);
+        transition: apacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        visibility: hidden;
+        span{
+            
+            margin-top: 5px;
+            font-size: 1.2rem;
+            zoom:100%
+        }
+    }
+    &:hover{
+        box-shadow: 1px 5px 15px yellow;
+        transform: translatey(-10px);
+    }
+    &:hover [tuiTitle] {
+        opacity: 1;
+        transform: translatey(0%);
+        visibility: visible;
+    }
+
+    [tuiSubtitle] {
+        color: yellow;
+        font-family: cursive;
+    }
+ 
+    &:after {
+        // background: url(/images/laptop7.webp)  no-repeat bottom right;       
+        background-size: cover;
+        height:13rem;
+    }
+ 
+    &:hover:after {
+        transform: scale(1.1);
+    }
+}
+
+.badge {
+    background: linear-gradient(0deg, rgb(132, 168, 2) 60%,rgb(183, 233, 2));
+    color: rgb(13, 223, 13);
+    border-color: rgb(163, 199, 91);
+}
+ 
+.money {
+    background: #ffdd2d;
+    color: #333;
+}
+
+// card button
+[tuiButtonGroup]{
+    &:hover{
+        background: linear-gradient(
+        0deg,
+        rgba(80, 74, 4, 0.676) 0%,
+        rgba(255,255,255,0)100%
+        );
+    }
+    
+    justify-content: center;    
+    padding: 2px;
+    align-self: baseline;
+    >button{
+        flex:0 0 120px;
+        border-radius: 0.5rem;
+        transition: 0.5s ease-in-out;
+        cursor:pointer;
+        overflow: hidden;
+        color: #ffdd2d;
+        
+        tui-icon{
+            color: #ffdd2d;
+        }
+
+
+    .content{
+        color:yellow;
+        transform: translatey(100%);
+        transition: apacity 0.5s ease-in-out, transform 0.5s 0.2s;
+        visibility: hidden;
+        span{
+            display: flex;
+            margin-top: 2px;
+        }
+    }
+        &:hover{
+            flex:0 0 250px;
+            transform: translatey(-5px);
+        }
+        &:hover .content {
+            opacity: 1;
+            transform: translatey(0%);
+            visibility: visible;
+        }
+    }
+}
+
+@import '@taiga-ui/core/styles/taiga-ui-local.less';
+
+.item {
+    .transition(~'box-shadow, transform');
+
+    display: block;
+    max-block-size: 6.25rem;
+    margin: 2rem auto;
+    border-radius: 100%;
+
+    &_active {
+        box-shadow: var(--tui-shadow-medium);
+        transform: scale(1.2);
+    }
+}
