@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   constructor(private spinner:NgxSpinnerService){}
   title = 'Quick Store';
   ngOnInit(): void {
-    this.spinner.show()
+    this.spinner.hide()
     setTimeout(()=>{
       this.spinner.hide()
     },3000)

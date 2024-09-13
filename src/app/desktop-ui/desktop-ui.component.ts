@@ -33,7 +33,8 @@ import {
   TuiChevron,
   TuiDataListDropdownManager,
   TuiBadgeNotification,
-  TuiButtonGroup
+  TuiButtonGroup,
+  TuiCarousel
 } from '@taiga-ui/kit';
 import {ReactiveFormsModule,FormControl, Validators } from '@angular/forms';
 import { TuiObscured } from '@taiga-ui/cdk/directives/obscured';
@@ -50,13 +51,15 @@ import { ProductsComponent } from '../products/products.component';
   selector: 'app-desktop-ui',
   standalone: true,
   imports: [
+    TuiCarousel,
+    CommonModule,
     ProductsComponent,
     TuiScrollable,
     TuiScrollbar,
     TuiButtonGroup,
     TuiSurface,
     TuiCardMedium,
-  TopViewComponent, 
+    TopViewComponent, 
     CollectionComponent,
     LoginComponent,
     CommonModule,
@@ -105,4 +108,28 @@ export class DesktopUiComponent {
     this.show=false
   };
   options=["discounts","Flash sale","Free delivery"];
+  protected items=[
+    "/images/header1.jpg",
+    "/images/laptop1.jpg",
+    "/images/ladies1.jpg",
+    "/images/laptop2.webp",
+    "/images/heaterjug2.jpg",
+    "/images/heaterjug.jpg",
+    "/images/laptop3.jpg",
+    "/images/laptop4.webp",
+    "/images/laptop5.webp",
+    "/images/samsung1.jpeg",
+    "/images/samsung2.jpg",
+    "/images/samsung4.jpg",
+    "/images/velvex.jpg",
+    "/images/clothe1.jpg",
+    "/images/clothe2.jpg",
+    "/images/clothe3.jpg",
+    "/images/clothe4.jpg",
+    "/images/clothe5.jpg",
+    "/images/clothe6.jpg",
+    "/images/clothe7.jpg",
+    "/images/clothe8.jpg",
+  ]
+  protected index=0
 }

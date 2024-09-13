@@ -2,9 +2,10 @@
     background: transparent;
     color: transparent;
     width: 14.9375rem;
-    height: 14rem;
+    height: fit-content;
     padding: 1px;
-    box-shadow:none;
+    box-shadow:bla;
+
     [tuiTitle]{
         font-size: 0.5rem;
         color:yellow;
@@ -32,7 +33,7 @@
         }
     }
     &:hover{
-        box-shadow: 1px 5px 15px yellow;
+        box-shadow: 1px 5px 15px rgb(85, 85, 15);
         transform: translatey(-10px);
     }
     &:hover [tuiTitle] {
@@ -55,79 +56,101 @@
     &:hover:after {
         transform: scale(1.1);
     }
-}
+ }
 
-.badge {
-    background: linear-gradient(0deg, rgb(132, 168, 2) 60%,rgb(183, 233, 2));
-    color: rgb(13, 223, 13);
-    border-color: rgb(163, 199, 91);
-}
+// .badge {
+//     background: linear-gradient(0deg, rgb(132, 168, 2) 60%,rgb(183, 233, 2));
+//     color: rgb(13, 223, 13);
+//     border-color: rgb(163, 199, 91);
+// }
  
-.money {
-    background: #ffdd2d;
-    color: #333;
-}
+// .money {
+//     background: #ffdd2d;
+//     color: #333;
+// }
 
 // card button
-[tuiButtonGroup]{
-    &:hover{
-        background: linear-gradient(
-        0deg,
-        rgba(80, 74, 4, 0.676) 0%,
-        rgba(255,255,255,0)100%
-        );
-    }
+// [tuiButtonGroup]{
+//     &:hover{
+//         background: linear-gradient(
+//         0deg,
+//         rgba(80, 74, 4, 0.676) 0%,
+//         rgba(255,255,255,0)100%
+//         );
+//     }
     
-    justify-content: center;    
-    padding: 2px;
-    align-self: baseline;
-    >button{
-        flex:0 0 120px;
-        border-radius: 0.5rem;
-        transition: 0.5s ease-in-out;
-        cursor:pointer;
-        overflow: hidden;
-        color: #ffdd2d;
+//     justify-content: center;    
+//     padding: 2px;
+//     align-self: baseline;
+//     >button{
+//         flex:0 0 120px;
+//         border-radius: 0.5rem;
+//         transition: 0.5s ease-in-out;
+//         cursor:pointer;
+//         overflow: hidden;
+//         color: #ffdd2d;
         
-        tui-icon{
-            color: #ffdd2d;
-        }
+//         tui-icon{
+//             color: #ffdd2d;
+//         }
 
 
-    .content{
-        color:yellow;
-        transform: translatey(100%);
-        transition: apacity 0.5s ease-in-out, transform 0.5s 0.2s;
-        visibility: hidden;
-        span{
-            display: flex;
-            margin-top: 2px;
-        }
-    }
-        &:hover{
-            flex:0 0 250px;
-            transform: translatey(-5px);
-        }
-        &:hover .content {
-            opacity: 1;
-            transform: translatey(0%);
-            visibility: visible;
-        }
-    }
+//     .content{
+//         color:yellow;
+//         transform: translatey(100%);
+//         transition: apacity 0.5s ease-in-out, transform 0.5s 0.2s;
+//         visibility: hidden;
+//         span{
+//             display: flex;
+//             margin-top: 2px;
+//         }
+//     }
+//         &:hover{
+//             flex:0 0 250px;
+//             transform: translatey(-5px);
+//         }
+//         &:hover .content {
+//             opacity: 1;
+//             transform: translatey(0%);
+//             visibility: visible;
+//         }
+//     }
+// }
+
+// @import '@taiga-ui/core/styles/taiga-ui-local.less';
+
+// .item {
+//     .transition(~'box-shadow, transform');
+
+//     display: block;
+//     max-block-size: 6.25rem;
+//     margin: 2rem auto;
+//     border-radius: 100%;
+
+//     &_active {
+//         box-shadow: var(--tui-shadow-medium);
+//         transform: scale(1.2);
+//     }
+// }
+// .label{
+//     color:aliceblue
+// }
+.card-button{
+    background-color: transparent;
+    color: yellow;
+};
+// .product,.card{
+//     background-color: linear-gradient(135deg, black 75%, yellow) ;
+// }
+.product{
+    box-shadow: none;
+    border-color: transparent;
 }
-
-@import '@taiga-ui/core/styles/taiga-ui-local.less';
-
-.item {
-    .transition(~'box-shadow, transform');
-
-    display: block;
-    max-block-size: 6.25rem;
-    margin: 2rem auto;
-    border-radius: 100%;
-
-    &_active {
-        box-shadow: var(--tui-shadow-medium);
-        transform: scale(1.2);
+tui-badge,[tuiBadge]{
+    background-color: yellow;
+    color: black;
+    opacity: 0.8;
+    span{
+        opacity: 1;
     }
 }

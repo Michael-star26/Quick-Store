@@ -81,7 +81,7 @@ import { CommonModule, NgFor } from '@angular/common';
 })
 export class ProductListComponent {
   protected items=[
-    "/images/header1.jpg",
+    "/images/persil.webp",
     "/images/laptop1.jpg",
     "/images/ladies1.jpg",
     "/images/laptop2.webp",
@@ -92,16 +92,17 @@ export class ProductListComponent {
     "/images/laptop5.webp",
     "/images/samsung1.jpeg",
     "/images/samsung2.jpg",
-    "/images/samsung4.jpg",
-    "/images/velvex.jpg",
-    "/images/clothe1.jpg",
-    "/images/clothe2.jpg",
-    "/images/clothe3.jpg",
-    "/images/clothe4.jpg",
-    "/images/clothe5.jpg",
-    "/images/clothe6.jpg",
-    "/images/clothe7.jpg",
-    "/images/clothe8.jpg",
+    
   ]
   protected index=0
 }
+// "/images/samsung4.jpg",
+//     "/images/velvex.jpg",
+//     "/images/clothe1.jpg",
+//     "/images/clothe2.jpg",
+//     "/images/clothe3.jpg",
+//     "/images/clothe4.jpg",
+//     "/images/clothe5.jpg",
+//     "/images/clothe6.jpg",
+//     "/images/clothe7.jpg",
+//     "/images/clothe8.jpg",

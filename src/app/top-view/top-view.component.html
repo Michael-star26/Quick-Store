@@ -1,7 +1,7 @@
 <section class="row mb-2"> 
     <div class="col-md-3 flex">
         <a class="ui mini yellow ribbon label" style="background-color: gold;">Offers</a>
-        <tui-carousel [draggable]="false" [duration]="500" style="color: aliceblue;height: 200px;background-color: transparent;"  >
+        <tui-carousel data-augmented-ui="br-2-clip-y t-rect bl-clip-x l-clip r-clip border" [draggable]="false" [duration]="500" style="color: aliceblue;height: 200px;background-color: transparent;"  >
             <div  *tuiItem>
                 <img src="/images/pillow.jpeg" height="200px" width="100%" alt="">    
             </div>
@@ -17,14 +17,14 @@
 
 
 
-    <div class="col-md-6 flex">
+    <div class="col-md-6 flex" >
         <a class="ui mini yellow ribbon label" style="background-color: gold;">Quick sales</a>
         <div></div>
-        <tui-carousel [itemsCount]="3" [draggable]="true" [duration]="6000"  [style.width]="'fit-content' " [style.color]="'aliceblue' ">    
+        <tui-carousel [itemsCount]="3" [draggable]="true" [duration]="6000"  [style.width]="'fit-content' " [style.color]="'aliceblue' " data-augmented-ui="br-2-clip-x l-clip">    
             <div  *tuiItem>
                 <img src="/images/mega.jpg" height="200px" width="100%" alt="">       
             </div>
-            <div style="color: aliceblue;" *tuiItem>               
+            <div style="color: aliceblue;" *tuiItem data-augmented-ui="br-2-clip-x l-clip tr-clip-y t-rect border">               
                 <tui-carousel [draggable]="false" [duration]="1000" style="color: aliceblue;height: 200px;background-color: transparent;"  >
                     <div  *tuiItem>
                         <img src="/images/pillow.jpeg" height="200px" width="100%" alt="">    
@@ -37,13 +37,13 @@
                     </div>
                 </tui-carousel>
             </div>
-            <div style="color: aliceblue;" *tuiItem>
+            <div style="color: aliceblue;" *tuiItem data-augmented-ui="br-2-clip-x l-clip border">
                 <img src="/images/clothe2.jpg" height="200px" width="100%" alt="2">
             </div>
-            <div style="color: aliceblue;" *tuiItem>
+            <div style="color: aliceblue;" *tuiItem data-augmented-ui="br-2-clip-x l-clip border">
                 <img src="/images/clothe1.jpg" height="200px" width="100%" alt="1">
             </div>
-            <div style="color: aliceblue;" *tuiItem>                
+            <div style="color: aliceblue;" *tuiItem data-augmented-ui="br-2-clip-x l-clip border">                
                 <tui-carousel [draggable]="false"[duration]="1000" style="color: aliceblue;height: 200px;background-color: transparent;"  >
                     <div  *tuiItem>
                         <img src="/images/pillow.jpeg" height="200px" width="100%" alt="">    
@@ -56,10 +56,10 @@
                     </div>
                 </tui-carousel>
             </div>
-            <div style="color: aliceblue;" *tuiItem>
+            <div style="color: aliceblue;" *tuiItem data-augmented-ui="br-2-clip-x l-clip border">
                 <img src="/images/clothe11.jpg" height="200px" width="100%" alt="1">
             </div>
-            <div style="color: aliceblue;" *tuiItem>
+            <div style="color: aliceblue;" *tuiItem data-augmented-ui="br-2-clip-x l-clip border">
                 <img src="/images/clothe6.jpg" height="200px" width="100%" alt="6">
             </div>
         </tui-carousel>     
@@ -71,17 +71,17 @@
     <div class="col-md-3 flex" >
         <a class="ui mini yellow right ribbon label" style="background-color: gold;">Holiday Sales</a>
         <tui-carousel [draggable]="true" [duration]="1500" [itemsCount]="1"   [style.width]="'fit-content' " [style.color]="'aliceblue' ">    
-            <div  *tuiItem>
+            <div  *tuiItem data-augmented-ui="br-2-clip-y t-rect bl-clip-x l-clip r-clip border">
                 <img src="/images/camon 19.jpg" height="200px" width="100%" alt="">   
             </div>
-            <div style="color: aliceblue;" *tuiItem>
+            <div style="color: aliceblue;" *tuiItem data-augmented-ui="br-2-clip-y t-rect bl-clip-x l-clip r-clip border">
                 <img src="/images/mega.jpg" height="200px" width="100%" alt="">
             </div>
-            <div style="color: aliceblue;" *tuiItem>
+            <div style="color: aliceblue;" *tuiItem data-augmented-ui="br-2-clip-y t-rect bl-clip-x l-clip r-clip border">
                 <img src="/images/bag1.jpg" height="200px" width="100%" alt="">
             </div>
         </tui-carousel>   
     </div>
 </section>
 <div class="mb-2 p-3"></div>
-<div class="ui horizontal divider" style="color: aliceblue;">Popular</div>
+<div class="ui horizontal divider" style="color: rgb(7, 8, 8);">Popular</div>

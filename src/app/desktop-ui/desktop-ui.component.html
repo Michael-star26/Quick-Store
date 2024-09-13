@@ -34,6 +34,7 @@
     </button>
     <form class="d-flex m-auto">
         <tui-input
+        data-augmented-ui="r-round-y"
         tuiTextfieldSize="s"
         [tuiTextfieldCleaner]="true"
         tuiTextfieldIconLeft="@tui.search"
@@ -79,8 +80,9 @@
     </button>
 </header>
 
-<div [style.display]=" 'flex' " class="main">
-    <aside [tuiNavigationAside]="expanded" [style.height]=" 'fit-content' " class="main">
+<div [style.display]=" 'flex' " class="main" >
+    <aside data-augmented-ui="br-2-clip-y" [tuiNavigationAside]="expanded" [style.height]=" 'fit-content' " class="main"
+    >
         <header>
             <a routerLink="" tuiAsideItem>
                 <tui-icon 
@@ -240,20 +242,32 @@
             tuiNavigationNav 
             [style.position]="'sticky'"
             style="margin-top: 0px;"
-            
             >
-                <a routerLink=".">
-                    <tui-icon icon="@tui.chevron-right"/>
-                    root
-                </a>   
-                <a routerLink=".">
-                    <tui-icon icon="@tui.chevron-right"/>
-                    directory
-                </a>
-                <a routerLink=".">
-                    <tui-icon icon="@tui.chevron-right"/>
-                    sub-directory
-                </a>    
+                <div 
+                style="height:fit-content;width:fit-content;background-color: black;zoom:60%">
+                    <tui-carousel
+                    [draggable]="true"
+                    [itemsCount]="14"
+                    [(index)]="index"
+                    [duration]="1000"
+                    [style.background-color]="'white'"
+                    style="height:fit-content;width:fit-content;background-color: black;"
+                    >
+                        <ng-container 
+                        *ngFor="let item of items;let i=index">
+                            <img src=""
+                            draggable="false"
+                            height="100px" 
+                            width="100px"
+                            src="{{item}}"
+                            data-augmented-ui="tr-clip"
+                            class="item"
+                            [class.item_active]="i===index+4"
+                            *tuiItem>
+                        </ng-container>
+
+                    </tui-carousel>
+                </div>
             </nav>
 
             <app-products></app-products>

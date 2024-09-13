@@ -1,116 +1,147 @@
 <h4 style="justify-content: center;color: aliceblue;">Categories</h4>
 <!-- section one -->
             <section>
-                <div class="ui horizontal divider" style="color: aliceblue;">Home appliances</div>
-
+                <div 
+                class="ui horizontal divider" 
+                style="color: aliceblue;"
+                data-augumented-ui="l-scoop-y"
+                >Home appliances</div>
+                
                 <section class="row" style="justify-content: baseline;align-items: center;flex:0 0 250px;">
                     <div
-                    tuiCardMedium
                     tuiSurface
-                    class="col-sm-4 col-4 poster d-flex m-2 "
-                    size="m"
-                    *tuiRepeatTimes="let index of 12" 
-                    style="background:url(/images/laptop4.webp)  no-repeat bottom right;       
-                    background-size: cover;
-                    height:13rem;
-                    background-color: transparent;
-                    zoom: 80%;
-                    "     
+                    class="ui mini cards col-sm-3 col-4 d-flex m-auto"
+                    *ngFor="let item of items"
+                    style="box-shadow: none;margin-bottom: 3px;"
                     >
-                        <tui-badge
-                                appearance="custom"
-                                class="badge"
-                                [style.color]="'yellow'"
-                            >
-                                &nbsp;In stock
-                        </tui-badge>
-                        <div style="filter: drop-shadow(2px 2px 2px black);">
-                            <h2 tuiTitle size="s" >
-                                <span size="s" style="font-size: small;">
-                                    Cinema, concerts, theaters and sports up to 25%. This offer is valid until friday midnight
-                                    <label class="ui mini basic yellow label" style="background-color: transparent;">
-                                        <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
-                                    </label>
-                                </span>
-
-                            </h2>
+                        <div class="ui mini product card m-2" style="background:linear-gradient(10deg,black 95%,rgb(19, 17, 0));opacity: 1;box-shadow: 2px 2px rgb(39, 39, 0)"
+                        data-augmented-ui="t-rect bl-clip-x l-rect-y r-rect border"
+                        >
+                            
+                            <div class="content">
+                                <div class="header">
+                                    <tui-badge style="opacity: 0.8;">
+                                        <span>$ 400</span>
+                                    </tui-badge>
+                                    <span class="right floated star icon m-1" tuiBadge>
+                                        <i class="icon star"></i>4 (12)
+                                    </span>
+                                </div>
+                                <div class="description">
+                                    <div class="image poster"
+                                    tuiCardMedium
+                                    tuiSurface="elevated"
+                                    [ngStyle]="{ 
+                                        'background-image': 'url(' + item + ')',
+                                        'background-size': 'cover',
+                                        'height':'14rem',
+                                        'background-color': 'transparent'
+                                    }">
+                                    <div>
+                                        <h2 tuiTitle>
+                                            <span tuiSubtitle>This is a great phone. It does not overheat</span>
+                                        </h2>
+                                    </div>
+                                    </div>
+                                </div>
+                                <span class="right floated icon m-1" tuiBadge>In stock</span>
+                                <span style="color: yellow;">brand</span>
+                                <div class="header" style="color:yellow" tuiFade>
+                                    A desktop pc
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <button class="ui mini left floated button" [style.background]="'yellow'">
+                                    <i class="icon cart" [style.color]="'black'"></i>
+                                    Add to cart
+                                </button>
+                    
+                                <button tuiIconButton class="card-button" size="s" iconStart="@tui.flag-filled"></button>
+                                <button tuiIconButton size="s" iconStart="@tui.bookmark-filled" class="card-button"></button>
+                            </div>
                         </div>
-                        <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
-                            <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%" size="s">
-                                <button size="s" >
-                                    <tui-icon icon="@tui.flag" ></tui-icon>
-                                    <span class="content">Rate</span>
-                                </button>
-
-                                <button size="s" >
-                                    <tui-icon icon="@tui.heart"></tui-icon>
-                                    <span class="content">Likes</span>
-                                </button>
-
-                                <button size="s" >
-                                    <tui-icon icon="@tui.shopping-cart"></tui-icon>
-                                    <span class="content">Cart</span>
-                                </button>
-                                
-                            </div>
-                            <label for="" class="ui yellow pointing above label">A supper computer</label>
-                            </div>
+                        
                     </div>
                 </section>
 
 <!-- sub section 2 -->
                 <section class="row" style="justify-content: baseline;align-items: center;">
                     <div class="ui horizontal divider" style="color: aliceblue;">Kitchen ware</div> 
-                    <div
-                    tuiCardMedium
-                    tuiSurface
-                    class="col-md-2 d-flex m-2"
-                    *tuiRepeatTimes="let index of 7"
-                    tuiSurface="elevated"
-                    class="poster d-flex m-2"
-                    style="background:url(/images/laptop5.webp)  no-repeat bottom right; 
-                    background-color: transparent;      
-                    background-size: cover;
-                    height:13rem;
-                "
+                    <tui-carousel
+                    [draggable]="true"
+                    [itemsCount]="8"
+                    [(index)]="index"
+                    [duration]="2000"
+                    class="m-2"
                     >
-                        <tui-badge
-                                appearance="custom"
-                                class="badge"
-                                [style.color]="'yellow'"
-                            >
-                                &nbsp;In stock
-                        </tui-badge>
-                        <div class="desc">
-                            <h2 tuiTitle size="s">
-                                <span size="s" style="font-size: small;">
-                                    Cinema, concerts, theaters and sports up to 25%
-                                    <label class="ui mini basic yellow label" style="background-color: transparent;">
-                                        <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
-                                    </label>
-                                </span>
-                            </h2>
+                        <ng-container 
+                        *ngFor="let item of items;let i=index">
+                            <img src=""
+                            draggable="false"
+                            height="100px" 
+                            width="100px"
+                            src="{{item}}"
+                            
+                            class="item"
+                            [class.item_active]="i===index+1"
+                            *tuiItem>
+                        </ng-container>
+
+                    </tui-carousel>
+                    <hr>
+                    <div
+                    tuiSurface
+                    class="ui mini cards col-sm-3 col-4 d-flex m-auto"
+                    *ngFor="let item of items"
+                    style="box-shadow: none;margin-bottom: 3px;"
+                    >
+                        <div class="ui mini product card m-2" style="background:linear-gradient(10deg,black 95%,rgb(19, 17, 0));opacity: 1;box-shadow: 2px 2px rgb(39, 39, 0)"
+                        data-augmented-ui="t-rect bl-clip-x l-rect-y r-rect border"
+                        >
+                            
+                            <div class="content">
+                                <div class="header">
+                                    <tui-badge style="opacity: 0.8;">
+                                        <span>$ 400</span>
+                                    </tui-badge>
+                                    <span class="right floated star icon m-1" tuiBadge>
+                                        <i class="icon star"></i>4 (12)
+                                    </span>
+                                </div>
+                                <div class="description">
+                                    <div class="image poster"
+                                    tuiCardMedium
+                                    tuiSurface="elevated"
+                                    [ngStyle]="{ 
+                                        'background-image': 'url(' + item + ')',
+                                        'background-size': 'cover',
+                                        'height':'14rem',
+                                        'background-color': 'transparent'
+                                    }">
+                                    <div>
+                                        <h2 tuiTitle>
+                                            <span tuiSubtitle>This is a great phone. It does not overheat</span>
+                                        </h2>
+                                    </div>
+                                    </div>
+                                </div>
+                                <span class="right floated icon m-1" tuiBadge>In stock</span>
+                                <span style="color: yellow;">brand</span>
+                                <div class="header" style="color:yellow" tuiFade>
+                                    A desktop pc
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <button class="ui mini left floated button" [style.background]="'yellow'">
+                                    <i class="icon cart" [style.color]="'black'"></i>
+                                    Add to cart
+                                </button>
+                    
+                                <button tuiIconButton class="card-button" size="s" iconStart="@tui.flag-filled"></button>
+                                <button tuiIconButton size="s" iconStart="@tui.bookmark-filled" class="card-button"></button>
+                            </div>
                         </div>
-                        <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
-                            <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%" size="s">
-                                <button size="s" >
-                                    <tui-icon icon="@tui.flag" ></tui-icon>
-                                    <!-- <span class="content">Rate</span> -->
-                                </button>
-
-                                <button size="s" >
-                                    <tui-icon icon="@tui.heart"></tui-icon>
-                                    <!-- <span class="content">Likes</span> -->
-                                </button>
-
-                                <button size="s" >
-                                    <tui-icon icon="@tui.shopping-cart"></tui-icon>
-                                    <!-- <span class="content">Cart</span> -->
-                                </button>
-                                
-                            </div>
-                            <label for="" class="ui yellow pointing above label">A supper computer</label>
-                            </div>
+                        
                     </div>
                     
             
@@ -119,61 +150,84 @@
             </section>
 
 <!--section 2  -->
-            <div class="ui horizontal divider" style="color: aliceblue;">Televisions</div>  
+            <div class="ui horizontal divider" style="color: aliceblue;">Televisions</div> 
+
+            <tui-carousel
+            [draggable]="true"
+            [itemsCount]="8"
+            [(index)]="index"
+            [duration]="2000"
+            >
+            <ng-container 
+            *ngFor="let item of items;let i=index">
+            <img src=""
+            draggable="false"
+            height="100px" 
+            width="100px"
+            src="{{item}}"
+            
+            class="item m-auto"
+            [class.item_active]="i===index+1"
+            *tuiItem>
+            </ng-container>
+
+            </tui-carousel>
+
             <section class="row" style="justify-content: baseline;align-items: start;">
 
-            <div
-            tuiCardMedium
-            tuiSurface
-            class="col-md-2 col-2 d-flex m-2"
-            *tuiRepeatTimes="let index of 7"
-            tuiSurface="elevated"
-            class="poster d-flex m-2"
-            style="background:url(/images/samsung5.png)  no-repeat bottom right;       
-                    background-size: cover;
-                    height:14rem;
-                    background-color: transparent;
-                    
-                    "
-            >
-                <tui-badge
-                        appearance="custom"
-                        class="badge"
-                        [style.color]="'yellow'"
+                <div
+                tuiSurface
+                class="ui mini cards col-sm-3 col-4 d-flex m-auto"
+                *ngFor="let item of items"
+                style="box-shadow: none;margin-bottom: 3px;"
+                >
+                    <div class="ui mini product card m-2" style="background:linear-gradient(10deg,black 95%,rgb(19, 17, 0));opacity: 1;box-shadow: 2px 2px rgb(39, 39, 0)" data-augmented-ui="t-rect bl-clip-x l-rect-y r-rect border"
                     >
-                        &nbsp;In stock
-                </tui-badge>
-                <div class="desc">
-                    <h2 tuiTitle size="s">
-                        <span size="s" style="font-size: small;">
-                            Cinema, concerts, theaters and sports up to 25%
-                            <label class="ui mini basic yellow label" style="background-color: transparent;">
-                                <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
-                            </label>
-                        </span>
-                    </h2>
-                </div>
-                <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
-                    <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%" size="s">
-                        <button size="s" >
-                            <tui-icon icon="@tui.flag" ></tui-icon>
-                            <span class="content">Rate</span>
-                        </button>
-
-                        <button size="s" >
-                            <tui-icon icon="@tui.heart"></tui-icon>
-                            <span class="content">Likes</span>
-                        </button>
-
-                        <button size="s" >
-                            <tui-icon icon="@tui.shopping-cart"></tui-icon>
-                            <span class="content">Cart</span>
-                        </button>
                         
+                        <div class="content">
+                            <div class="header">
+                                <tui-badge style="opacity: 0.8;">
+                                    <span>$ 400</span>
+                                </tui-badge>
+                                <span class="right floated star icon m-1" tuiBadge>
+                                    <i class="icon star"></i>4 (12)
+                                </span>
+                            </div>
+                            <div class="description">
+                                <div class="image poster"
+                                tuiCardMedium
+                                tuiSurface="elevated"
+                                [ngStyle]="{ 
+                                    'background-image': 'url(' + item + ')',
+                                    'background-size': 'cover',
+                                    'height':'14rem',
+                                    'background-color': 'transparent'
+                                }">
+                                <div>
+                                    <h2 tuiTitle>
+                                        <span tuiSubtitle>This is a great phone. It does not overheat</span>
+                                    </h2>
+                                </div>
+                                </div>
+                            </div>
+                            <span class="right floated icon m-1" tuiBadge>In stock</span>
+                            <span style="color: yellow;">brand</span>
+                            <div class="header" style="color:yellow" tuiFade>
+                                A desktop pc
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <button class="ui mini left floated button" [style.background]="'yellow'">
+                                <i class="icon cart" [style.color]="'black'"></i>
+                                Add to cart
+                            </button>
+                
+                            <button tuiIconButton class="card-button" size="s" iconStart="@tui.flag-filled"></button>
+                            <button tuiIconButton size="s" iconStart="@tui.bookmark-filled" class="card-button"></button>
+                        </div>
                     </div>
-                    <label for="" class="ui yellow pointing above label">A supper computer</label>
+                    
                 </div>
-            </div>
             </section>
 <!--section 3  -->
 <div class="ui horizontal divider" style="color: aliceblue;">Clothes</div>
@@ -191,7 +245,7 @@
             width="100px"
             src="{{item}}"
             
-            class="item"
+            class="item m-2"
             [class.item_active]="i===index+1"
             *tuiItem>
             </ng-container>
@@ -200,54 +254,56 @@
 
             <section class="row" style="justify-content: baseline;align-items: start;" >
                 <div
-                class="poster col-md-2 col-2 d-flex m-2"
-                *ngFor="let item of items"
-                tuiCardMedium
-                tuiSurface="elevated"
-                [ngStyle]="{ 
-                    'background-image': 'url(' + item + ')',
-                    'background-size': 'cover',
-                    'height':'14rem',
-                    'background-color': 'transparent'
-                }"
-                
+                    tuiSurface
+                    class="ui mini cards col-sm-3 col-4 d-flex m-auto"
+                    *ngFor="let item of items"
+                    style="box-shadow: none;margin-bottom: 3px;"
                     >
-                    <tui-badge
-                                appearance="custom"
-                                class="badge"
-                                [style.color]="'yellow'"
-                            >
-                                &nbsp;In stock
-                    </tui-badge>
-                    <div class="desc">
-                        <h2 tuiTitle size="s">
-                            <span size="s" style="font-size: small;">
-                                Cinema, concerts, theaters and sports up to 25%
-                                <label class="ui mini basic yellow label" style="background-color: transparent;">
-                                    <tui-icon icon="@tui.star" style="color: yellow;"></tui-icon> 5
-                                </label>
-                            </span>
-                        </h2>
-                    </div>
-                    <div class="card-footer" style="align-self: center;gap:1rem;zoom:80%">
-                        <div tuiButtonGroup [style.background-color]="'transaprent'" style="align-self: center;gap:1rem;zoom:80%;" size="s">
-                            <button size="s" >
-                                <tui-icon icon="@tui.flag" ></tui-icon>
-                                <span class="content">Rate</span>
-                            </button>
-
-                            <button size="s" >
-                                <tui-icon icon="@tui.heart"></tui-icon>
-                                <span class="content">Likes</span>
-                            </button>
-
-                            <button size="s" >
-                                <tui-icon icon="@tui.shopping-cart"></tui-icon>
-                                <span class="content">Cart</span>
-                            </button>
+                        <div class="ui mini product card m-2" style="background:linear-gradient(10deg,black 95%,rgb(19, 17, 0));opacity: 1;box-shadow: 2px 2px rgb(39, 39, 0)" data-augmented-ui="t-rect bl-clip-x tr-clip-y l-rect-y r-rect border"
+                        >
                             
+                            <div class="content">
+                                <div class="header">
+                                    <tui-badge style="opacity: 0.8;">
+                                        <span>$ 400</span>
+                                    </tui-badge>
+                                    <span class="right floated star icon m-1" tuiBadge>
+                                        <i class="icon star"></i>4 (12)
+                                    </span>
+                                </div>
+                                <div class="description">
+                                    <div class="image poster"
+                                    tuiCardMedium
+                                    tuiSurface="elevated"
+                                    [ngStyle]="{ 
+                                        'background-image': 'url(' + item + ')',
+                                        'background-size': 'cover',
+                                        'height':'14rem',
+                                        'background-color': 'transparent'
+                                    }">
+                                    <div>
+                                        <h2 tuiTitle>
+                                            <span tuiSubtitle>This is a great phone. It does not overheat</span>
+                                        </h2>
+                                    </div>
+                                    </div>
+                                </div>
+                                <span class="right floated icon m-1" tuiBadge>In stock</span>
+                                <span style="color: yellow;">brand</span>
+                                <div class="header" style="color:yellow" tuiFade>
+                                    A desktop pc
+                                </div>
+                            </div>
+                            <div class="extra content">
+                                <button class="ui mini left floated button" [style.background]="'yellow'">
+                                    <i class="icon cart" [style.color]="'black'"></i>
+                                    Add to cart
+                                </button>
+                    
+                                <button tuiIconButton class="card-button" size="s" iconStart="@tui.flag-filled"></button>
+                                <button tuiIconButton size="s" iconStart="@tui.bookmark-filled" class="card-button"></button>
+                            </div>
                         </div>
-                        <label for="" class="ui yellow pointing above label">A supper computer</label>
-                    </div>
+                        
                 </div>
             </section>
