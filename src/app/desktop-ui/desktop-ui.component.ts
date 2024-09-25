@@ -36,7 +36,7 @@ import {
   TuiButtonGroup,
   TuiCarousel
 } from '@taiga-ui/kit';
-import {ReactiveFormsModule,FormControl, Validators } from '@angular/forms';
+import {ReactiveFormsModule,FormControl, Validators,FormsModule } from '@angular/forms';
 import { TuiObscured } from '@taiga-ui/cdk/directives/obscured';
 import { TuiActiveZone } from '@taiga-ui/cdk/directives/active-zone';
 import { RouterLink, RouterOutlet } from '@angular/router';
@@ -46,11 +46,12 @@ import { LoginComponent } from '../login/login.component';
 import { CollectionComponent } from '../collection/collection.component';
 import { TopViewComponent } from '../top-view/top-view.component';
 import { ProductsComponent } from '../products/products.component';
-
 @Component({
   selector: 'app-desktop-ui',
   standalone: true,
   imports: [
+    TuiNavigation,
+    FormsModule,
     TuiCarousel,
     CommonModule,
     ProductsComponent,
@@ -91,7 +92,7 @@ import { ProductsComponent } from '../products/products.component';
     TuiDropdown,
     TuiObscured,
     TuiActiveZone,
-    
+
   ],
   templateUrl: './desktop-ui.component.html',
   styleUrl: './desktop-ui.component.less',
@@ -103,6 +104,10 @@ export class DesktopUiComponent {
   search=new FormControl ('',[Validators.required])
   position='sticky'
   show=true
+  protected open=false
+  toggle(open:boolean){
+    this.open=open
+  }
   pst(){
     this.position='relative'
     this.show=false

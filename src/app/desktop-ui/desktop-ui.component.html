@@ -1,10 +1,13 @@
-
-<header tuiNavigationHeader  class="header">   
-    <button
-    iconStart="@tui.slack"
-    size="s"
+<header tuiNavigationHeader  class="header"> 
+    <button 
+    type="button"
     tuiIconButton
-    ></button>
+    iconStart="@tui.slack"
+    tuiNavigationDrawer
+    title="Menu"
+    >
+        
+    </button> 
     <span tuiNavigationLogo>
         <tui-icon appearance="warning" icon="@tui.shopping-bag"/>
         <span tuiFade>Quick Store</span>
@@ -23,12 +26,12 @@
                 <tui-opt-group *ngFor="let opt of options">
                     <a tuiOption>{{opt}}</a>
                 </tui-opt-group>
-                <!-- <button tuiOption type="button">
+                <button tuiOption type="button">
                     Offers
                 </button>
                 <button tuiOption type="button">
                     Featured     
-                </button> -->
+                </button>
             </tui-data-list>
         </ng-template>
     </button>
@@ -47,16 +50,19 @@
             />
         </tui-input>
     </form>
-    <button
+    <a
     tuiButton
     iconStart="@tui.shopping-cart"
     [style.color]=" 'yellow' "
+    routerLink="/welcome/cart"
+    [routerLink]="['/welcome/cart',{pageSec:'cart'}]"
+    href="#cart"
     >
     <sup>
         <tui-badge size="s" [style.background-color]=" 'maroon' ">5</tui-badge>
     </sup>
         <span tuiFade [style.color]=" 'aliceblue' ">Cart</span>
-    </button>
+    </a>
     <button
     tuiButton
     iconStart="@tui.user"
@@ -232,9 +238,9 @@
         <main tuiNavigationMain class="main">
             <span size="s" class="transit flex row">
                 <div class="mb-5 p-3"></div>
-
-                <app-top-view></app-top-view>
-                               
+                <div id="cart"></div>
+                <router-outlet></router-outlet>  
+                <app-top-view></app-top-view>        
                 <app-collection></app-collection>                        
             </span>
             
@@ -269,11 +275,9 @@
                     </tui-carousel>
                 </div>
             </nav>
-
             <app-products></app-products>
 
         </main>
     </span>
 </div>
 
-<router-outlet></router-outlet>

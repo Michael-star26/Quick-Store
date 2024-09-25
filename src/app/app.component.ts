@@ -5,7 +5,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { NgxSpinnerService } from "ngx-spinner";
 import { DesktopUiComponent } from "./desktop-ui/desktop-ui.component";
 import { FooterComponent } from "./footer/footer.component";
-
+import {MobileUiComponent} from "./mobile-ui/mobile-ui.component"
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -15,6 +15,7 @@ import { FooterComponent } from "./footer/footer.component";
     NgxSpinnerModule,
     DesktopUiComponent,
     FooterComponent,
+    MobileUiComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.less'
@@ -28,5 +29,5 @@ export class AppComponent implements OnInit {
       this.spinner.hide()
     },3000)
   }
-  
+
 }

@@ -1,1 +1,42 @@
-<p>cart works!</p>
+<div 
+tuiCardLarge
+class="m-2 cart"
+id="cart"
+>
+<header tuiTitle>
+    Cart
+</header>
+<div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+      <div tuiCell="l">
+        <img src="/images/bag1.jpg" alt="">
+      </div>
+      <form [formGroup]="cartQuantity" class="m-2" size="s">
+        <tui-input-number formControlName="quantity" tuiTextfieldSize="s" appearance="accent">
+            Quantity
+        </tui-input-number>
+    </form>
+    </div>
+
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+        <tui-badge appearance="accent" class="m-2">
+            5 products
+        </tui-badge>
+        <div class="inventory" *ngFor="let item of items">
+            <section class="flex-row d-flex justify-content-sm-start m-2">
+                <div  class="m-1" >
+                    <img src="{{item}}" alt="" style="width: 10rem;height: 10rem;filter: drop-shadow(1px 1px rgb(223, 223, 193));border-radius: 15px;">
+                </div>
+                
+                <div  class="m-1" >
+                    <h3 tuiTitle>Laptop
+                        <p tuiSubtitle>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem. Nobis dolorem vero ab optio porro nam atque! Quod enim dolor facere id? Modi sequi beatae rerum laboriosam cupiditate aut!
+                        </p>
+                    </h3>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</div>
