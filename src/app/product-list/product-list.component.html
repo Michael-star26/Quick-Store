@@ -71,7 +71,7 @@
                     [draggable]="true"
                     [itemsCount]="8"
                     [(index)]="index"
-                    [duration]="2000"
+                    [duration]="4000"
                     class="m-2"
                     >
                         <ng-container 
@@ -83,7 +83,7 @@
                             src="{{item}}"
                             
                             class="item"
-                            [class.item_active]="i===index+1"
+                            [class.item_active]="i===index+3"
                             *tuiItem>
                         </ng-container>
 
@@ -156,7 +156,7 @@
             [draggable]="true"
             [itemsCount]="8"
             [(index)]="index"
-            [duration]="2000"
+            [duration]="4000"
             >
             <ng-container 
             *ngFor="let item of items;let i=index">
@@ -167,7 +167,7 @@
             src="{{item}}"
             
             class="item m-auto"
-            [class.item_active]="i===index+1"
+            [class.item_active]="i===index+3"
             *tuiItem>
             </ng-container>
 
@@ -235,7 +235,7 @@
             [draggable]="true"
             [itemsCount]="8"
             [(index)]="index"
-            [duration]="2000"
+            [duration]="4000"
             >
             <ng-container 
             *ngFor="let item of items;let i=index">
@@ -245,8 +245,8 @@
             width="100px"
             src="{{item}}"
             
-            class="item m-2"
-            [class.item_active]="i===index+1"
+            class="item m-2 item"
+            [class.item_active]="i===index+3"
             *tuiItem>
             </ng-container>
 

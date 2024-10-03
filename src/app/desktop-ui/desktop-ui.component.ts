@@ -13,7 +13,6 @@ import {
   TuiScrollbar,
   TuiDropdownService
  } from '@taiga-ui/core';
-  
  
 import {
   TuiCardLarge,
@@ -35,7 +34,7 @@ import {
   TuiBadgeNotification,
   TuiButtonGroup,
   TuiCarousel
-} from '@taiga-ui/kit';
+} from '@taiga-ui/kit';                                                                                                                                                                                                                                                                                                                                                                                                                                 
 import {ReactiveFormsModule,FormControl, Validators,FormsModule } from '@angular/forms';
 import { TuiObscured } from '@taiga-ui/cdk/directives/obscured';
 import { TuiActiveZone } from '@taiga-ui/cdk/directives/active-zone';
@@ -92,7 +91,6 @@ import { ProductsComponent } from '../products/products.component';
     TuiDropdown,
     TuiObscured,
     TuiActiveZone,
-
   ],
   templateUrl: './desktop-ui.component.html',
   styleUrl: './desktop-ui.component.less',

@@ -94,7 +94,7 @@ export class ProductListComponent {
     "/images/samsung2.jpg",
     
   ]
-  protected index=0
+  protected index=3
 }
 // "/images/samsung4.jpg",
 //     "/images/velvex.jpg",

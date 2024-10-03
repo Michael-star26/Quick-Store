@@ -1,3 +1,4 @@
+<gallery></gallery>
 <div 
 tuiCardLarge
 class="m-2 cart"
@@ -6,22 +7,30 @@ id="cart"
 <header tuiTitle>
     Cart
 </header>
-<div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
+<div style="width:100%"> 
+    <tui-badge appearance="accent" class="m-2">
+        <span tuiTitle>5 products</span>
+    </tui-badge>
+    <span appearance="accent" class="right floated star icon m-1" style="align-self: flex-end;" tuiBadge>
+        <h2 tuiTitle>Totlal $400
+        </h2>
+    </span>
+</div>
+<div class="flex-row d-flex justify-content-sm-start m-2">
+   
+    <div class="">
       <div tuiCell="l">
-        <img src="/images/bag1.jpg" alt="">
+        <!-- <img src="/images/laptop3.jpg" alt="" style="width:20rem;height:20rem"> -->
+        
       </div>
       <form [formGroup]="cartQuantity" class="m-2" size="s">
-        <tui-input-number formControlName="quantity" tuiTextfieldSize="s" appearance="accent">
-            Quantity
+        <tui-input-number formControlName="quantity" tuiTextfieldSize="m" appearance="accent">
+            <span style="color:black" tuiTitle>Quantity</span>
         </tui-input-number>
     </form>
     </div>
-
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 ">
-        <tui-badge appearance="accent" class="m-2">
-            5 products
-        </tui-badge>
+    <!-- <div class=" ">
+        
         <div class="inventory" *ngFor="let item of items">
             <section class="flex-row d-flex justify-content-sm-start m-2">
                 <div  class="m-1" >
@@ -33,10 +42,15 @@ id="cart"
                         <p tuiSubtitle>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem. Nobis dolorem vero ab optio porro nam atque! Quod enim dolor facere id? Modi sequi beatae rerum laboriosam cupiditate aut!
                         </p>
+                        <div tuiButtonGroup>
+                            <button type="button">
+                                <tui-icon icon="@tui.trash" />
+                            </button>
+                        </div>
                     </h3>
                 </div>
             </section>
         </div>
-    </div>
+    </div> -->
 </div>
 </div>
