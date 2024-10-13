@@ -64,13 +64,13 @@ tuiInputNumberOptionsProvider({
 })
 export class CartComponent implements OnInit{
   @ViewChild(GalleryComponent) gallery!: GalleryComponent;
-  // protected items=[
-  //   "/images/header1.jpg",
-  //   "/images/laptop1.jpg",
-  //   "/images/ladies1.jpg",
-  //   "/images/laptop2.webp",
-  //   "/images/heaterjug2.jpg",
-  // ]
+  protected items=[
+    "/images/header1.jpg",
+    "/images/laptop1.jpg",
+    "/images/ladies1.jpg",
+    "/images/laptop2.webp",
+    "/images/heaterjug2.jpg",
+  ]
 
   cartQuantity=new FormGroup({
     quantity:new FormControl(1)

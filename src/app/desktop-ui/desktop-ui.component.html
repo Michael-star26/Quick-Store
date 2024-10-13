@@ -243,7 +243,12 @@
             <span size="s" class="transit flex row">
                 <div class="mb-5 p-3"></div>
                 <div id="cart"></div>
-                <router-outlet></router-outlet>  
+                <!-- <router-outlet></router-outlet>   -->
+                 <ng-template #preview>
+                    <tui-preview>
+                        
+                    </tui-preview>
+                 </ng-template>
                 <app-top-view></app-top-view>        
                 <app-collection></app-collection>                        
             </span>

@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, TemplateRef, ViewChild } from '@angular/core';
+import {PolymorpheusContent} from '@taiga-ui/polymorpheus';
 import { 
   TuiIcon,
   TuiButton,
@@ -11,7 +12,8 @@ import {
   TuiSurface,
   TuiScrollable,
   TuiScrollbar,
-  TuiDropdownService
+  TuiDropdownService,
+  TuiDialogContext
  } from '@taiga-ui/core';
  
 import {
@@ -33,7 +35,8 @@ import {
   TuiDataListDropdownManager,
   TuiBadgeNotification,
   TuiButtonGroup,
-  TuiCarousel
+  TuiCarousel,
+  TuiPreviewDialogService
 } from '@taiga-ui/kit';                                                                                                                                                                                                                                                                                                                                                                                                                                 
 import {ReactiveFormsModule,FormControl, Validators,FormsModule } from '@angular/forms';
 import { TuiObscured } from '@taiga-ui/cdk/directives/obscured';
@@ -91,6 +94,7 @@ import { ProductsComponent } from '../products/products.component';
     TuiDropdown,
     TuiObscured,
     TuiActiveZone,
+    
   ],
   templateUrl: './desktop-ui.component.html',
   styleUrl: './desktop-ui.component.less',
@@ -98,6 +102,12 @@ import { ProductsComponent } from '../products/products.component';
   providers:[TuiDropdownService]
 })
 export class DesktopUiComponent {
+  private readonly previewDialogService = inject(TuiPreviewDialogService);
+  @ViewChild(`preview`)
+  readonly preview?: TemplateRef<TuiDialogContext<void>>;
+  modal() {
+    this.previewDialogService.open(this.preview).subscribe();
+  }
   expanded=false
   search=new FormControl ('',[Validators.required])
   position='sticky'
