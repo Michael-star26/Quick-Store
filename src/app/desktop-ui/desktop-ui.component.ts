@@ -36,7 +36,8 @@ import {
   TuiBadgeNotification,
   TuiButtonGroup,
   TuiCarousel,
-  TuiPreviewDialogService
+  TuiPreviewDialogService,
+  TuiPreview
 } from '@taiga-ui/kit';                                                                                                                                                                                                                                                                                                                                                                                                                                 
 import {ReactiveFormsModule,FormControl, Validators,FormsModule } from '@angular/forms';
 import { TuiObscured } from '@taiga-ui/cdk/directives/obscured';
@@ -94,7 +95,7 @@ import { ProductsComponent } from '../products/products.component';
     TuiDropdown,
     TuiObscured,
     TuiActiveZone,
-    
+    TuiPreview
   ],
   templateUrl: './desktop-ui.component.html',
   styleUrl: './desktop-ui.component.less',
@@ -103,23 +104,23 @@ import { ProductsComponent } from '../products/products.component';
 })
 export class DesktopUiComponent {
   private readonly previewDialogService = inject(TuiPreviewDialogService);
-  @ViewChild(`preview`)
-  readonly preview?: TemplateRef<TuiDialogContext<void>>;
-  modal() {
-    this.previewDialogService.open(this.preview).subscribe();
+  @ViewChild('preview')
+  readonly preview?: TemplateRef<TuiDialogContext>;
+  protected sho():void {
+    this.previewDialogService.open(this.preview || '').subscribe();
   }
   expanded=false
   search=new FormControl ('',[Validators.required])
   position='sticky'
-  show=true
+  // show=true
   protected open=false
   toggle(open:boolean){
     this.open=open
   }
-  pst(){
-    this.position='relative'
-    this.show=false
-  };
+  // pst(){
+  //   this.position='relative'
+  //   this.show=false
+  // };
   options=["discounts","Flash sale","Free delivery"];
   protected items=[
     "/images/header1.jpg",

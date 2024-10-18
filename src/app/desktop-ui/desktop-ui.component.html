@@ -16,6 +16,41 @@
         <tui-icon appearance="warning" icon="@tui.shopping-bag"/>
         <span tuiFade>Quick Store</span>
     </span>
+    <button 
+    type="button"
+    tuiButton
+    [style.color]=" 'yellow' "
+    (click)="sho()"
+    >
+        Show cart
+    </button>
+    <ng-template 
+    #preview 
+    let-preview>
+        <tui-preview
+        [rotatable]="false"
+        [zoomable]="false"
+        >
+        <iframe
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        frameborder="0"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        title="Youtube"
+        class="content"
+    ></iframe>
+
+    <button
+        iconStart="@tui.x"
+        tuiIconButton
+        tuiPreviewAction
+        type="button"
+        (click)="preview.complete()"
+    >
+        Close
+    </button>
+        </tui-preview>
+     </ng-template>
     <button
     appearance="secondary"
     tuiButton
@@ -61,6 +96,7 @@
     routerLink="/welcome/cart"
     [routerLink]="['/welcome/cart',{pageSec:'cart'}]"
     href="#cart"
+    
     >
     <sup>
         <tui-badge size="s" [style.background-color]=" 'maroon' ">5</tui-badge>
@@ -244,11 +280,6 @@
                 <div class="mb-5 p-3"></div>
                 <div id="cart"></div>
                 <!-- <router-outlet></router-outlet>   -->
-                 <ng-template #preview>
-                    <tui-preview>
-                        
-                    </tui-preview>
-                 </ng-template>
                 <app-top-view></app-top-view>        
                 <app-collection></app-collection>                        
             </span>
