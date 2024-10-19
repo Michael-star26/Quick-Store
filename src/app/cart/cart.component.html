@@ -1,8 +1,3 @@
-<gallery 
-id="myGallery" 
-counter counterPosition="bottom" 
-thumbs 
-thumbPosition="left" />
 <div style="margin-bottom: 25px;padding-bottom: 5px;"></div>
 <div 
 
@@ -22,7 +17,20 @@ id="cart"
             </h2>
         </span>
     </div>
-    
+    <gallery 
+    id="myGallery" 
+    counter counterPosition="top" 
+    thumbs 
+    thumbPosition="left"
+    bullets bulletPosition="bottom"
+    loop
+    autoplay
+    autoplayInterval="4000"
+    orientation="vertical"
+    itemAutosize
+    loadingStrategy="preload"
+    loadingAttr="eager" 
+    style="background-color: transparent;" />
     <div class="">
         <form [formGroup]="cartQuantity" class="m-2" size="s" >
             <tui-input-number formControlName="quantity" tuiTextfieldSize="m" appearance="accent">
