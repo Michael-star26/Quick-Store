@@ -1,60 +1,67 @@
+<gallery 
+id="myGallery" 
+counter counterPosition="bottom" 
+thumbs 
+thumbPosition="left" />
 <div style="margin-bottom: 25px;padding-bottom: 5px;"></div>
 <div 
 
 class="m-2 cart"
 id="cart"
 >
-<header tuiTitle>
-    Cart
-</header>
+    <header tuiTitle>
+        Cart
+    </header>
 
-<div style="width:100%"> 
-    <tui-badge appearance="accent" class="m-2">
-        <span tuiTitle>5 products</span>
-    </tui-badge>
-    <span appearance="accent" class="right floated star icon m-1" style="align-self: flex-end;" tuiBadge>
-        <h2 tuiTitle>Totlal $400
-        </h2>
-    </span>
-</div>
-<gallery style="background-color: aliceblue;" [loop]="true" id="myGallery" thumbPosition="left"></gallery>
-<div class="flex-row d-flex justify-content-sm-start m-2">
-   
-    <div class="">
-      <div tuiCell="l">
-        <img src="/images/laptop3.jpg" alt="" style="width:20rem;height:20rem">
-        
-      </div>
-      <form [formGroup]="cartQuantity" class="m-2" size="s">
-        <tui-input-number formControlName="quantity" tuiTextfieldSize="m" appearance="accent">
-            <span style="color:black" tuiTitle>Quantity</span>
-        </tui-input-number>
-    </form>
+    <div style="width:100%"> 
+        <tui-badge appearance="accent" class="m-2">
+            <span tuiTitle>5 products</span>
+        </tui-badge>
+        <span appearance="accent" class="right floated star icon m-1" style="align-self: flex-end;" tuiBadge>
+            <h2 tuiTitle>Totlal $400
+            </h2>
+        </span>
     </div>
-    <div class=" ">
-        
-        <div class="inventory" *ngFor="let item of items">
-            <section class="flex-row d-flex justify-content-sm-start m-2">
-                <div  class="m-1" >
-                    <img src="{{item}}" alt="" style="width: 10rem;height: 10rem;filter: drop-shadow(1px 1px rgb(223, 223, 193));border-radius: 15px;">
-                </div>
-                
-                <div  class="m-1" >
-                    <h3 tuiTitle>Laptop
-                        <p tuiSubtitle>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem. Nobis dolorem vero ab optio porro nam atque! Quod enim dolor facere id? Modi sequi beatae rerum laboriosam cupiditate aut!
-                        </p>
-                        <div tuiButtonGroup>
-                            <button type="button">
-                                <tui-icon icon="@tui.trash" />
-                            </button>
-                        </div>
-                    </h3>
-                </div>
-            </section>
+    
+    <div class="">
+        <form [formGroup]="cartQuantity" class="m-2" size="s" >
+            <tui-input-number formControlName="quantity" tuiTextfieldSize="m" appearance="accent">
+                <span style="color:black" tuiTitle>Quantity</span>
+            </tui-input-number>
+        </form>
+    </div>
+
+    <div class="flex-row d-flex justify-content-sm-start m-2">
+    
+        <div class="" style="width: 50%;">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur rerum fugit nesciunt omnis pariatur. Iure numquam repudiandae quos quidem natus, dolorem nulla! Eaque assumenda corrupti voluptate, ratione pariatur deleniti ex.
+            </p>
+        </div>
+        <div class=" ">
+            
+            <div class="inventory" *ngFor="let item of items">
+                <section class="flex-row d-flex justify-content-sm-start m-2">
+                    <div  class="m-1" >
+                        <img src="{{item}}" alt="" style="width: 10rem;height: 10rem;filter: drop-shadow(1px 1px rgb(223, 223, 193));border-radius: 15px;">
+                    </div>
+                    
+                    <div  class="m-1" >
+                        <h3 tuiTitle>Laptop
+                            <p tuiSubtitle>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, exercitationem. Nobis dolorem vero ab optio porro nam atque! Quod enim dolor facere id? Modi sequi beatae rerum laboriosam cupiditate aut!
+                            </p>
+                            <div tuiButtonGroup>
+                                <button type="button">
+                                    <tui-icon icon="@tui.trash" />
+                                </button>
+                            </div>
+                        </h3>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- <gallery style="background-color: aliceblue;" id="myGallery" thumbPosition="top"></gallery> -->
