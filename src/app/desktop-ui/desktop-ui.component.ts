@@ -114,9 +114,9 @@ export class DesktopUiComponent {
   position='sticky'
   // show=true
   protected open=false
-  toggle(open:boolean){
-    this.open=open
-  }
+  // toggle(open:boolean){
+  //   this.open=open
+  // }
   // pst(){
   //   this.position='relative'
   //   this.show=false

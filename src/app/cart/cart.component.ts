@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TuiCardLarge, TuiCardMedium, TuiCell } from '@taiga-ui/layout';
+import { TuiCardLarge, TuiCardMedium, TuiCell, TuiNavigation } from '@taiga-ui/layout';
 import { 
   TuiIcon,
   TuiButton,
@@ -10,7 +10,7 @@ import {
   TuiSurface,
   tuiNumberFormatProvider,
  } from '@taiga-ui/core';
- import { GalleryModule, GalleryItem, ImageItem,GalleryComponent } from 'ng-gallery';
+ 
  import {
   TuiFade,
   TuiBadge,
@@ -23,6 +23,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { TuiInputNumberModule,tuiInputNumberOptionsProvider,TuiTextfieldControllerModule } from '@taiga-ui/legacy';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GALLERY_CONFIG, GalleryConfig , GalleryModule, Gallery, GalleryRef, ImageItem} from 'ng-gallery';
 @Component({
   selector: 'app-cart',
   standalone: true,
@@ -50,6 +51,7 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
     FormsModule,
     TuiTextfieldControllerModule,
     GalleryModule,
+    TuiNavigation
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.less',
@@ -59,11 +61,18 @@ providers:[
   }),
 tuiInputNumberOptionsProvider({
   step:1
-})
+}),
+{
+  provide: GALLERY_CONFIG,
+  useValue: {
+    autoHeight: true,
+    imageSize: 'cover'
+  } as GalleryConfig
+}
 ]
 })
 export class CartComponent implements OnInit{
-  @ViewChild(GalleryComponent) gallery!: GalleryComponent;
+  constructor(private gallery: Gallery){}
   protected items=[
     "/images/header1.jpg",
     "/images/laptop1.jpg",
@@ -72,20 +81,22 @@ export class CartComponent implements OnInit{
     "/images/heaterjug2.jpg",
   ]
 
+
   cartQuantity=new FormGroup({
     quantity:new FormControl(1)
   })
-  images!: GalleryItem[];
 
   ngOnInit(): void {
-    this.gallery.load([
-      new ImageItem({ src: '/images/brand4.jpg', thumb: '/images/brand4.jpg',alt:'not loaded' }),
-      new ImageItem({ src: '/images/laptop3.jpg', thumb: '/images/laptop2.webp',alt:'not loaded' }),
-      new ImageItem({ src: '/images/laptop4.webp', thumb: '/images/laptop2.webp' }),
-      new ImageItem({ src: '/images/laptop5.webp', thumb: '/images/laptop2.webp' }),
-      new ImageItem({ src: '/images/laptop6.webp', thumb: '/images/laptop2.webp' }),
+    const galleryRef = this.gallery.ref('myGallery');
+    galleryRef.load([
+      new ImageItem({ src: '/brand3.png', thumb: 'brand3.png',alt:'xyz',type:'png' }),
+      new ImageItem({ src: '/brand3.png', thumb: 'brand3.png',alt:'xyz' }),
+      new ImageItem({ src: '/brand3.png', thumb: 'brand3.png',alt:'xyz' }),
+      new ImageItem({ src: '/images/samsung8.jpg', thumb: '/images/samsung8.jpg' }),
+      new ImageItem({ src: '/images/samsung8.jpg', thumb: '/images/samsung8.jpg' }),
+      new ImageItem({ src: '/images/samsung8.jpg', thumb: '/images/samsung8.jpg' }),
+      // ... more items
     ])
-      
   }
 
 }

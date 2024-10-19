@@ -1,56 +1,23 @@
-<header tuiNavigationHeader  class="header"> 
+<header tuiNavigationHeader  class="header" style="position: fixed;"> 
     <button 
     type="button"
     tuiIconButton
     iconStart="@tui.slack"
     tuiNavigationDrawer
     title="Menu"
+    [(open)]="open"
     >
-    <!-- <tui-data-list>
-        <tui-opt-group>
-            <button tuiButton>click me</button>
-        </tui-opt-group>
-    </tui-data-list>    -->
+    <p>Hello</p> 
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>
+    <p>Hello</p>  
     </button> 
     <span tuiNavigationLogo>
         <tui-icon appearance="warning" icon="@tui.shopping-bag"/>
         <span tuiFade>Quick Store</span>
     </span>
-    <button 
-    type="button"
-    tuiButton
-    [style.color]=" 'yellow' "
-    (click)="sho()"
-    >
-        Show cart
-    </button>
-    <ng-template 
-    #preview 
-    let-preview>
-        <tui-preview
-        [rotatable]="false"
-        [zoomable]="false"
-        >
-        <iframe
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        frameborder="0"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-        title="Youtube"
-        class="content"
-    ></iframe>
-
-    <button
-        iconStart="@tui.x"
-        tuiIconButton
-        tuiPreviewAction
-        type="button"
-        (click)="preview.complete()"
-    >
-        Close
-    </button>
-        </tui-preview>
-     </ng-template>
+   
     <button
     appearance="secondary"
     tuiButton
@@ -89,6 +56,44 @@
             />
         </tui-input>
     </form>
+
+    <button 
+    type="button"
+    tuiButton
+    [style.color]=" 'yellow' "
+    (click)="sho()"
+    >
+        Show cart
+    </button>
+    <ng-template 
+    #preview 
+    let-preview>
+        <tui-preview
+        [rotatable]="false"
+        [zoomable]="false"
+        >
+        <iframe
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        frameborder="0"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+        title="Youtube"
+        class="content"
+    ></iframe>
+
+    <button
+        iconStart="@tui.x"
+        tuiIconButton
+        tuiPreviewAction
+        type="button"
+        (click)="preview.complete()"
+    >
+        Close
+    </button>
+        </tui-preview>
+     </ng-template>
+
+
     <a
     tuiButton
     iconStart="@tui.shopping-cart"
@@ -274,12 +279,11 @@
         </footer>
     </aside>
 
-    <span [style.background]="'aliceblue'" >
+    
         <main tuiNavigationMain class="main">
             <span size="s" class="transit flex row">
-                <div class="mb-5 p-3"></div>
                 <div id="cart"></div>
-                <!-- <router-outlet></router-outlet>   -->
+                <router-outlet></router-outlet>  
                 <app-top-view></app-top-view>        
                 <app-collection></app-collection>                        
             </span>
@@ -318,6 +322,6 @@
             <app-products></app-products>
 
         </main>
-    </span>
+    
 </div>
 

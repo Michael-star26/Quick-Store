@@ -1,12 +1,13 @@
-<!-- <gallery></gallery> -->
+<div style="margin-bottom: 25px;padding-bottom: 5px;"></div>
 <div 
-tuiCardLarge
+
 class="m-2 cart"
 id="cart"
 >
 <header tuiTitle>
     Cart
 </header>
+
 <div style="width:100%"> 
     <tui-badge appearance="accent" class="m-2">
         <span tuiTitle>5 products</span>
@@ -16,6 +17,7 @@ id="cart"
         </h2>
     </span>
 </div>
+<gallery style="background-color: aliceblue;" [loop]="true" id="myGallery" thumbPosition="left"></gallery>
 <div class="flex-row d-flex justify-content-sm-start m-2">
    
     <div class="">
@@ -54,3 +56,5 @@ id="cart"
     </div>
 </div>
 </div>
+
+<!-- <gallery style="background-color: aliceblue;" id="myGallery" thumbPosition="top"></gallery> -->
