@@ -20,12 +20,12 @@ import {
   TuiButtonGroup,
   TuiCarousel
 } from '@taiga-ui/kit';
-import { CommonModule } from '@angular/common';
+import { CommonModule, AsyncPipe, NgForOf } from '@angular/common';
 import { TuiInputNumberModule,tuiInputNumberOptionsProvider,TuiTextfieldControllerModule } from '@taiga-ui/legacy';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GALLERY_CONFIG, GalleryConfig , GalleryModule, Gallery, GalleryRef, ImageItem,} from 'ng-gallery';
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { NgxColorsModule } from 'ngx-colors';
+import {TuiTable} from '@taiga-ui/addon-table';
 @Component({
   selector: 'app-cart',
   standalone: true,
@@ -53,7 +53,10 @@ import { provideAnimations } from '@angular/platform-browser/animations';
     FormsModule,
     TuiTextfieldControllerModule,
     GalleryModule,
-    TuiNavigation
+    TuiNavigation,
+    NgxColorsModule,
+    TuiTable,
+    NgForOf
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.less',
@@ -103,5 +106,45 @@ export class CartComponent implements OnInit{
       // ... more items
     ])
   }
+
+  selectedColor: string = "#9C27B0";
+  colorPalette = [
+    "#00BCD4",
+    "#03A9F4",
+    "#B2F35C",
+  ];
+
+  data:any=[
+    {
+      name:"Back camera",
+      descriprion:"50 MP back camera"
+    },
+    {
+      name:"Rear camera",
+      descriprion:"10 MP rear camera"
+    },
+    {
+      name:"RAM",
+      descriprion:"8 GB"
+    },
+    ,
+    {
+      name:"Storage",
+      descriprion:"64GB expandable"
+    },
+    {
+      name:"Screen",
+      descriprion:"Gorilla screen"
+    },
+    {
+      name:"Display",
+      descriprion:"Amo led"
+    },
+    {
+      name:"Sim card",
+      descriprion:"Dual sim"
+    }
+  ] as const
+  protected readonly columns=Object.keys(this.data[0])
 
 }
